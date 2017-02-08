@@ -9,4 +9,17 @@
     <string name="reviewer_portrait">REVIEWER</string>
     <string name="institution_portrait">INSTITUTION</string>
     <string name="search">Search</string>
+
+    <string-array name="Category">
+        <item> Private </item>
+        <item> Government</item>
+        <item> Cambridge</item>
+    </string-array>
+
+    <string-array name="Education_level">
+        <item> Pre-school</item>
+        <item> Primary</item>
+        <item> Secondary</item>
+        <item> University </item>
+    </string-array>
 </resources>
