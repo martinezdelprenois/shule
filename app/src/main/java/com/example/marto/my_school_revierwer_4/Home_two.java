@@ -1,7 +1,9 @@
 package com.example.marto.my_school_revierwer_4;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -9,7 +11,7 @@ import android.widget.Spinner;
  * Created by marto on 07-Feb-17.
  */
 
-public class Home_two extends Activity {
+public class Home_two extends AppCompatActivity {
 
     Spinner spin_category, spin_education_level;
     ArrayAdapter<CharSequence> array_category, array_education_level;
@@ -25,6 +27,15 @@ public class Home_two extends Activity {
         education();
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu men){
+        MenuInflater inflate = getMenuInflater();
+        inflate.inflate(R.menu.menu_home_two,men);
+        return true;
+    }
+
+
 
     private void category(){
         spin_category = (Spinner) findViewById(R.id.spinner_categories);

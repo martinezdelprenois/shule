@@ -2,7 +2,6 @@
 <resources>
     <string name="sign_in">SIGN IN</string>
     <string name="sign_up">SIGN UP</string>
-    <string name="education_level">EDUCATION LEVEL</string>
     <string name="category">Category</string>
     <string name="institution">INSTITUTION</string>
     <string name="reviewer">REVIEWER</string>
@@ -16,4 +15,9 @@
     <string name="school_email">School Email</string>
     <string name="account_name_reviewer">Account Name</string>
     <string name="email_reviewer">Email</string>
+    <string name="profile_home_two">Profile</string>
+    <string name="profile">Profile</string>
+    <string name="following">Following</string>
+    <string name="reviews">Reviews</string>
+    <string name="share">Share</string>
 </resources>

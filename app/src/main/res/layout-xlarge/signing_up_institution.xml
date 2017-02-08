@@ -24,7 +24,7 @@
         android:layout_alignRight="@+id/editText_password_institution"
         android:layout_alignEnd="@+id/editText_password_institution"
         android:layout_marginTop="19dp"
-        android:id="@+id/editText_personal_emal"
+        android:id="@+id/editText_personal_email"
         android:text="@string/personal_email"
         android:alpha=".5" />
 

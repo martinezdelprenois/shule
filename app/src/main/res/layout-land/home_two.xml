@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:scrollbarStyle="insideOverlay"
     style="@android:style/Widget.DeviceDefault.Light.ScrollView"
-    android:clipToPadding="true"
+    android:clipToPadding="false"
     android:fillViewport="true">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"

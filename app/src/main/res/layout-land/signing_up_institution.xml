@@ -33,7 +33,7 @@
         android:layout_alignRight="@+id/editText_password_institution"
         android:layout_alignEnd="@+id/editText_password_institution"
         android:layout_marginTop="19dp"
-        android:id="@+id/editText_personal_emal"
+        android:id="@+id/editText_personal_email"
         android:text="@string/personal_email"
         android:alpha=".5" />
 
@@ -43,9 +43,9 @@
         android:inputType="textPersonName"
         android:text="@string/website_link"
         android:ems="10"
-        android:layout_below="@+id/editText_personal_emal"
-        android:layout_alignRight="@+id/editText_personal_emal"
-        android:layout_alignEnd="@+id/editText_personal_emal"
+        android:layout_below="@+id/editText_personal_email"
+        android:layout_alignRight="@+id/editText_personal_email"
+        android:layout_alignEnd="@+id/editText_personal_email"
         android:layout_marginTop="10dp"
         android:id="@+id/editText_website_link"
         android:alpha=".5" />

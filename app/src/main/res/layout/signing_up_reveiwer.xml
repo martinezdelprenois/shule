@@ -5,20 +5,6 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/account_name_reviewer"
-        android:ems="10"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="248dp"
-        android:id="@+id/editText_reviewer_account"
-        android:maxLines="1"
-        android:selectAllOnFocus="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
         android:layout_marginTop="23dp"
@@ -28,7 +14,8 @@
         android:selectAllOnFocus="true"
         android:layout_below="@+id/editText_reviewer_account"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:alpha=".5" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -42,5 +29,22 @@
         android:selectAllOnFocus="true"
         android:layout_below="@+id/editText_password_reviewer"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:alpha=".5" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/account_name_reviewer"
+        android:ems="10"
+        android:layout_marginTop="252dp"
+        android:id="@+id/editText_reviewer_account"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:alpha=".5"
+         />
 </RelativeLayout>
