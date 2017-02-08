@@ -8,4 +8,12 @@
     <string name="reviewer">REVIEWER</string>
     <string name="reviewer_portrait">REVIEWER</string>
     <string name="institution_portrait">INSTITUTION</string>
+    <string name="search_btn">SEARCH</string>
+    <string name="education_level_small_caps">Education level</string>
+    <string name="name_of_institution">Name of Institution</string>
+    <string name="password">password</string>
+    <string name="website_link">Website Link</string>
+    <string name="school_email">School Email</string>
+    <string name="account_name_reviewer">Account Name</string>
+    <string name="email_reviewer">Email</string>
 </resources>

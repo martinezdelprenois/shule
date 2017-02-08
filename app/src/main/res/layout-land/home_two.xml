@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_home_two"
+    android:layout_width ="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbarStyle="insideOverlay"
+    style="@android:style/Widget.DeviceDefault.Light.ScrollView"
+    android:clipToPadding="true"
+    android:fillViewport="true">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="wrap_content">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -80,9 +88,7 @@
         android:layout_marginBottom="11dp"
         android:id="@+id/btn_searching"
         android:layout_above="@+id/searching"
-        android:layout_toRightOf="@+id/textView_education_level"
-        android:layout_toEndOf="@+id/textView_education_level"
-        android:layout_marginLeft="34dp"
-        android:layout_marginStart="34dp" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
+</ScrollView>

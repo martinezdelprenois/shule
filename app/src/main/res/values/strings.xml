@@ -9,4 +9,27 @@
     <string name="reviewer_portrait">REVIEWER</string>
     <string name="institution_portrait">INSTITUTION</string>
     <string name="search">Search</string>
+    <string name="search_btn">SEARCH</string>
+    <string name="education_level_small_caps">Education level</string>
+    <string name="name_of_institution">Name of Institution</string>
+    <string name="password">password</string>
+    <string name="personal_email">Personal Email</string>
+    <string name="website_link">Website Link</string>
+    <string name="school_email">School Email</string>
+    <string name="account_name_reviewer">Account Name</string>
+    <string name="email_reviewer">Email</string>
+    <string name="password_reviewer">password</string>
+
+    <string-array name="Category">
+        <item> Private </item>
+        <item> Government</item>
+        <item> Cambridge</item>
+    </string-array>
+
+    <string-array name="Education_level">
+        <item> Pre-school</item>
+        <item> Primary</item>
+        <item> Secondary</item>
+        <item> University </item>
+    </string-array>
 </resources>
