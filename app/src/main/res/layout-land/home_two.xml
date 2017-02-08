@@ -80,9 +80,6 @@
         android:layout_marginBottom="11dp"
         android:id="@+id/btn_searching"
         android:layout_above="@+id/searching"
-        android:layout_toRightOf="@+id/textView_education_level"
-        android:layout_toEndOf="@+id/textView_education_level"
-        android:layout_marginLeft="34dp"
-        android:layout_marginStart="34dp" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

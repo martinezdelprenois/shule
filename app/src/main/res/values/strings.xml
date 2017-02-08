@@ -9,6 +9,8 @@
     <string name="reviewer_portrait">REVIEWER</string>
     <string name="institution_portrait">INSTITUTION</string>
     <string name="search">Search</string>
+    <string name="search_btn">SEARCH</string>
+    <string name="education_level_small_caps">Education level</string>
 
     <string-array name="Category">
         <item> Private </item>
