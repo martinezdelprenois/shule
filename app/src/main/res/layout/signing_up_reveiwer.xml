@@ -2,4 +2,45 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/account_name_reviewer"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="248dp"
+        android:id="@+id/editText_reviewer_account"
+        android:maxLines="1"
+        android:selectAllOnFocus="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_marginTop="23dp"
+        android:id="@+id/editText_password_reviewer"
+        android:text="@string/password_reviewer"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:layout_below="@+id/editText_reviewer_account"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:layout_marginTop="23dp"
+        android:id="@+id/editText_Email_reviewer"
+        android:text="@string/email_reviewer"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:layout_below="@+id/editText_password_reviewer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

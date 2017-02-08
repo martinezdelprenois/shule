@@ -14,4 +14,6 @@
     <string name="password">password</string>
     <string name="website_link">Website Link</string>
     <string name="school_email">School Email</string>
+    <string name="account_name_reviewer">Account Name</string>
+    <string name="email_reviewer">Email</string>
 </resources>

@@ -16,6 +16,9 @@
     <string name="personal_email">Personal Email</string>
     <string name="website_link">Website Link</string>
     <string name="school_email">School Email</string>
+    <string name="account_name_reviewer">Account Name</string>
+    <string name="email_reviewer">Email</string>
+    <string name="password_reviewer">password</string>
 
     <string-array name="Category">
         <item> Private </item>
