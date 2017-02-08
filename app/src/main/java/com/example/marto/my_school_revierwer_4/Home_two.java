@@ -21,7 +21,23 @@ public class Home_two extends Activity {
         super.onCreate(state);
         setContentView(R.layout.home_two);
 
+        category();
+        education();
+
     }
 
-    private void
+    private void category(){
+        spin_category = (Spinner) findViewById(R.id.spinner_categories);
+        array_category = ArrayAdapter.createFromResource(this, R.array.Category,android.R.layout.simple_spinner_dropdown_item);
+        array_category.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin_category.setAdapter(array_category);
+
+    }
+
+    private void education(){
+        spin_education_level = (Spinner)findViewById(R.id.spinner2);
+        array_education_level = ArrayAdapter.createFromResource(this, R.array.Education_level,android.R.layout.simple_spinner_dropdown_item);
+        array_education_level.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin_education_level.setAdapter(array_education_level);
+    }
 }
