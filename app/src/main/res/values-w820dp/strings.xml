@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="education_level">EDUCATION LEVEL</string>
+    <string name="category">Category</string>
+    <string name="institution">INSTITUTION</string>
+    <string name="reviewer">REVIEWER</string>
+    <string name="reviewer_portrait">REVIEWER</string>
+    <string name="institution_portrait">INSTITUTION</string>
+</resources>
