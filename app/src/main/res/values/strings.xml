@@ -19,6 +19,10 @@
     <string name="email_reviewer">Email</string>
     <string name="password_reviewer">password</string>
     <string name="profile_home_two">Profile</string>
+    <string name="profile">Profile</string>
+    <string name="following">Following</string>
+    <string name="reviews">Reviews</string>
+    <string name="share">Share</string>
 
     <string-array name="Category">
         <item> Private </item>

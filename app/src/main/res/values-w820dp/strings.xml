@@ -16,4 +16,8 @@
     <string name="account_name_reviewer">Account Name</string>
     <string name="email_reviewer">Email</string>
     <string name="profile_home_two">Profile</string>
+    <string name="profile">Profile</string>
+    <string name="following">Following</string>
+    <string name="reviews">Reviews</string>
+    <string name="share">Share</string>
 </resources>
