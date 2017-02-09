@@ -5,28 +5,16 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/name_of_institution"
-        android:ems="10"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="197dp"
-        android:id="@+id/editText_institution_name"
-        android:alpha=".5" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:layout_below="@+id/editText_password_institution"
-        android:layout_alignRight="@+id/editText_password_institution"
-        android:layout_alignEnd="@+id/editText_password_institution"
-        android:layout_marginTop="19dp"
-        android:id="@+id/editText_personal_email"
-        android:text="@string/personal_email"
-        android:alpha=".5" />
+        android:id="@+id/editText_school_email"
+        android:text="@string/school_email"
+        android:alpha=".5"
+        android:selectAllOnFocus="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="373dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -34,36 +22,54 @@
         android:inputType="textPersonName"
         android:text="@string/website_link"
         android:ems="10"
-        android:layout_below="@+id/editText_personal_emal"
-        android:layout_alignRight="@+id/editText_personal_emal"
-        android:layout_alignEnd="@+id/editText_personal_emal"
-        android:layout_marginTop="10dp"
         android:id="@+id/editText_website_link"
-        android:alpha=".5" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:layout_marginTop="17dp"
-        android:id="@+id/editText_password_institution"
-        android:text="@string/password"
-        android:layout_below="@+id/editText_institution_name"
+        android:alpha=".5"
+        android:selectAllOnFocus="true"
+        android:layout_above="@+id/editText_school_email"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:alpha=".5" />
+        android:layout_marginBottom="52dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:layout_below="@+id/editText_website_link"
-        android:layout_alignRight="@+id/editText_website_link"
-        android:layout_alignEnd="@+id/editText_website_link"
-        android:layout_marginTop="14dp"
-        android:id="@+id/editText_school_email"
-        android:text="@string/school_email"
-        android:alpha=".5" />
+        android:id="@+id/editText_personal_emal"
+        android:text="@string/personal_email"
+        android:alpha=".5"
+        android:selectAllOnFocus="true"
+        android:layout_above="@+id/editText_website_link"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="41dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText_password_institution"
+        android:text="@string/password"
+        android:alpha=".5"
+        android:selectAllOnFocus="true"
+        android:layout_above="@+id/editText_personal_emal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="29dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/name_of_institution"
+        android:ems="10"
+        android:id="@+id/editText_institution_name"
+        android:alpha=".5"
+        android:layout_above="@+id/editText_password_institution"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="41dp"
+        android:selectAllOnFocus="true" />
+
 </RelativeLayout>
