@@ -1,5 +1,5 @@
 <resources>
-   
+
     <string name="sign_in">SIGN IN</string>
     <string name="sign_up">SIGN UP</string>
     <string name="category">Category</string>
@@ -23,6 +23,7 @@
     <string name="following">Following</string>
     <string name="reviews">Reviews</string>
     <string name="share">Share</string>
+    <string name="splash_screen">Splash_screen</string>
 
     <string-array name="Category">
         <item> Private </item>
