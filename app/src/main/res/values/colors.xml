@@ -3,4 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- BACKGROUND COLORS FOR THE INTRO_ INSTITUTION PART-->
+    <color name="bg_1"> #b12515</color>
+    <color name="bg_2"> #ffbb00</color>
+    <color name="bg_3"> #74a412</color>
+
+    <!-- DOTS ACTIVE COLORS-->
+    <color name="dot_active"> #000000</color>
+
+    <!-- DOTS INACTIVE COLORS-->
+        <color name="dot_inactive"> #cccccc</color>
 </resources>

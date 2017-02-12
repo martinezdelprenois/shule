@@ -15,8 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home_two"></activity>
-        <activity android:name=".Signing_up_class"></activity>
+        <activity android:name=".Home_two" />
+        <activity android:name=".Signing_up_class" />
         <activity android:name=".Signing_institution" />
         <activity android:name=".Signing_reviewer" />
         <activity android:name=".Home_one">
@@ -26,6 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Intro_institution"></activity>
     </application>
 
 </manifest>
