@@ -22,7 +22,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="197dp"
         android:id="@+id/editText_institution_name"
-        android:alpha=".5" />
+        android:alpha=".5"
+        android:selectAllOnFocus="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -35,7 +36,8 @@
         android:layout_marginTop="19dp"
         android:id="@+id/editText_personal_email"
         android:text="@string/personal_email"
-        android:alpha=".5" />
+        android:alpha=".5"
+        android:selectAllOnFocus="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -48,7 +50,8 @@
         android:layout_alignEnd="@+id/editText_personal_email"
         android:layout_marginTop="10dp"
         android:id="@+id/editText_website_link"
-        android:alpha=".5" />
+        android:alpha=".5"
+        android:selectAllOnFocus="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -61,7 +64,8 @@
         android:layout_below="@+id/editText_institution_name"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:alpha=".5" />
+        android:alpha=".5"
+        android:selectAllOnFocus="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -74,6 +78,7 @@
         android:layout_marginTop="14dp"
         android:id="@+id/editText_school_email"
         android:text="@string/school_email"
-        android:alpha=".5" />
+        android:alpha=".5"
+        android:selectAllOnFocus="true" />
 </RelativeLayout>
 </ScrollView>
