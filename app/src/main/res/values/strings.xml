@@ -25,6 +25,29 @@
     <string name="share">Share</string>
     <string name="splash_screen">Splash_screen</string>
 
+    <!-- STRINGS FOR THE INTRO_SLIDERS FOR INSTITUTION-->
+    <string name="next"> Next </string>
+    <string name="skip"> Skip</string>
+    <string name="start"> Start</string>
+    <string name="title_slide_one"> WELCOME</string>
+    <string name="desc_one"> My School Reviewer </string>
+    <string name="title_slide_two"> PART TWO</string>
+    <string name="desc_two">My part two </string>
+    <string name="title_slide_three"> PART THREE</string>
+    <string name="desc_three"> my part three </string>
+    <string name="hello">hello</string>
+    <string name="next_institution">NEXT</string>
+    <string name="ok">OK</string>
+    <string name="maps">Maps</string>
+    <string name="following_institution">Following</string>
+    <string name="institution_profile">Institution Profile</string>
+    <string name="updates">Updates</string>
+    <string name="view_reviews">View reviews</string>
+    <string name="edit_institution_profile">Edit institution profile</string>
+
+
+    <!-- STRINGS FOR INTRO_SLIDERS AS SHOWN ABOVE-->
+
     <string-array name="Category">
         <item> Private </item>
         <item> Government</item>

@@ -10,8 +10,28 @@
     <color name="bg_3"> #74a412</color>
 
     <!-- DOTS ACTIVE COLORS-->
-    <color name="dot_active"> #000000</color>
+    <color name="dot_active1"> #000000</color>
+    <color name ="dot_active2">#000000</color>
+    <color name="dot_active3">#000000</color>
 
     <!-- DOTS INACTIVE COLORS-->
-        <color name="dot_inactive"> #cccccc</color>
+        <color name="dot_inactive1"> #cccccc</color>
+    <color name="dot_inactive2">#cccccc</color>
+    <color name="dot_inactive3">#cccccc</color>
+
+    <array name="actives">
+        <item> @color/dot_active1</item>
+        <item> @color/dot_active2</item>
+        <item> @color/dot_active3</item>
+
+
+</array>
+
+    <array name="inactives">
+        <item> @color/dot_inactive1</item>
+        <item> @color/dot_inactive2</item>
+        <item> @color/dot_inactive3</item>
+
+
+    </array>
 </resources>

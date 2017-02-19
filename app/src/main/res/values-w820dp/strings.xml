@@ -21,4 +21,9 @@
     <string name="reviews">Reviews</string>
     <string name="share">Share</string>
     <string name="splash_screen">Splash_screen</string>
+    <string name="next_institution">NEXT</string>
+    <string name="following_institution">Following</string>
+    <string name="updates">Updates</string>
+    <string name="view_reviews">View reviews</string>
+    <string name="edit_institution_profile">Edit institution profile</string>
 </resources>

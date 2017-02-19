@@ -21,12 +21,9 @@
         android:title="@string/share"
         android:id="@+id/share_reviewer" />
 
-    <item app:showAsAction="never"
-        android:title="Advertisements"
-        android:id="@+id/ads" />
 
     <item app:showAsAction="never"
-        android:title="Maps"
+        android:title="@string/maps"
         android:id="@+id/maps" />
 
 
