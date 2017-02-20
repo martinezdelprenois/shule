@@ -54,6 +54,10 @@
     <string name="account_name_">Account name</string>
     <string name="email_">Email</string>
     <string name="password___">Password</string>
+    <string name="next_reviewer">Next</string>
+    <string name="institution_number">Institution number</string>
+    <string name="institution_index_number">Institution Index Number</string>
+    <string name="website_link__">Website Link</string>
 
 
     <!-- STRINGS FOR INTRO_SLIDERS AS SHOWN ABOVE-->

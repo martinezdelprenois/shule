@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logo"
-        android:label="MY SCHOOL REVIEWER"
+        android:label="My school reveiwer"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Splash_Screen">
