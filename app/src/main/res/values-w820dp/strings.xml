@@ -21,4 +21,23 @@
     <string name="reviews">Reviews</string>
     <string name="share">Share</string>
     <string name="splash_screen">Splash_screen</string>
+    <string name="next_institution">NEXT</string>
+    <string name="following_institution">Following</string>
+    <string name="updates">Updates</string>
+    <string name="view_reviews">View reviews</string>
+    <string name="edit_institution_profile">Edit institution profile</string>
+    <string name="institution_">Institution</string>
+    <string name="name_of_institution_">Name of Institution</string>
+    <string name="password_">Password</string>
+    <string name="password__">Password</string>
+    <string name="personal_email_">Personal Email</string>
+    <string name="school_email_">School Email</string>
+    <string name="website_link_">website link</string>
+    <string name="account_name_">Account name</string>
+    <string name="email_">Email</string>
+    <string name="password___">Password</string>
+    <string name="next_reviewer">Next</string>
+    <string name="institution_number">Institution number</string>
+    <string name="institution_index_number">Institution Index Number</string>
+    <string name="website_link__">Website Link</string>
 </resources>
