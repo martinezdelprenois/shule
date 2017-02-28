@@ -58,6 +58,19 @@
     <string name="institution_number">Institution number</string>
     <string name="institution_index_number">Institution Index Number</string>
     <string name="website_link__">Website Link</string>
+    <string name="institution_ed">Institution</string>
+    <string name="category_ed">Category</string>
+    <string name="index_number_ed">Index Number</string>
+    <string name="institution_email_ed">Institution Email</string>
+    <string name="institution_email_ed_ed">Institution Email</string>
+    <string name="institution_index_number_ed">Institution Index Number</string>
+    <string name="institution_website_ed">Institution Website</string>
+    <string name="institution_ed_ed">Institution</string>
+    <string name="password_ed">Password</string>
+    <string name="name_ed_De">Name</string>
+    <string name="password_ed_ed_ed">Password</string>
+    <string name="personal_email_ed">Personal Email</string>
+    <string name="personal_email_ed_ed">Personal Email</string>
 
 
     <!-- STRINGS FOR INTRO_SLIDERS AS SHOWN ABOVE-->
