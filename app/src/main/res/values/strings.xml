@@ -71,6 +71,13 @@
     <string name="password_ed_ed_ed">Password</string>
     <string name="personal_email_ed">Personal Email</string>
     <string name="personal_email_ed_ed">Personal Email</string>
+    <string name="next_btn">Next</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="first_name_">First Name</string>
+    <string name="last_name_">Last Name</string>
+    <string name="user_name__">User Name</string>
+    <string name="user_name___">User Name</string>
 
 
     <!-- STRINGS FOR INTRO_SLIDERS AS SHOWN ABOVE-->
