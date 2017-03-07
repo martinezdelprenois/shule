@@ -58,6 +58,26 @@
     <string name="institution_number">Institution number</string>
     <string name="institution_index_number">Institution Index Number</string>
     <string name="website_link__">Website Link</string>
+    <string name="institution_ed">Institution</string>
+    <string name="category_ed">Category</string>
+    <string name="index_number_ed">Index Number</string>
+    <string name="institution_email_ed">Institution Email</string>
+    <string name="institution_email_ed_ed">Institution Email</string>
+    <string name="institution_index_number_ed">Institution Index Number</string>
+    <string name="institution_website_ed">Institution Website</string>
+    <string name="institution_ed_ed">Institution</string>
+    <string name="password_ed">Password</string>
+    <string name="name_ed_De">Name</string>
+    <string name="password_ed_ed_ed">Password</string>
+    <string name="personal_email_ed">Personal Email</string>
+    <string name="personal_email_ed_ed">Personal Email</string>
+    <string name="next_btn">Next</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="first_name_">First Name</string>
+    <string name="last_name_">Last Name</string>
+    <string name="user_name__">User Name</string>
+    <string name="user_name___">User Name</string>
 
 
     <!-- STRINGS FOR INTRO_SLIDERS AS SHOWN ABOVE-->
@@ -73,5 +93,12 @@
         <item> Primary</item>
         <item> Secondary</item>
         <item> University </item>
+    </string-array>
+
+    <string-array name="Institution_category">
+        <item> Pre-school</item>
+        <item>Primary</item>
+        <item> Secondary</item>
+    <item> University</item>
     </string-array>
 </resources>

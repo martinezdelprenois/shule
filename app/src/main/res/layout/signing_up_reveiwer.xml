@@ -10,20 +10,14 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/btn_next_reviewer" />
 
-    <EditText
+    <TextView
+        android:text="@string/email_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/email_reveiwer"
-        android:text="@string/email_reviewer"
-        android:maxLines="1"
-        android:selectAllOnFocus="true"
-        android:alpha=".5"
-        android:layout_above="@+id/btn_next_reviewer"
-        android:layout_alignLeft="@+id/password_reviewer"
-        android:layout_alignStart="@+id/password_reviewer"
-        android:layout_marginBottom="48dp" />
+        android:id="@+id/textview_email_reviewer"
+        android:layout_alignBottom="@+id/email_reveiwer"
+        android:layout_alignLeft="@+id/view_last_name"
+        android:layout_alignStart="@+id/view_last_name" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -35,52 +29,103 @@
         android:maxLines="1"
         android:selectAllOnFocus="true"
         android:alpha=".5"
-        android:layout_above="@+id/email_reveiwer"
-        android:layout_alignLeft="@+id/account_reviewer"
-        android:layout_alignStart="@+id/account_reviewer"
-        android:layout_marginBottom="20dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="text|textPersonName|number"
-        android:text="@string/account_name_reviewer"
-        android:ems="10"
-        android:id="@+id/account_reviewer"
-        android:selectAllOnFocus="true"
-        android:alpha=".5"
-        android:layout_marginLeft="34dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginBottom="42dp"
-        android:layout_above="@+id/textView8"
-        android:layout_toRightOf="@+id/textView6"
-        android:layout_toEndOf="@+id/textView6" />
-
-    <TextView
-        android:text="@string/account_name_"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView6"
-        android:layout_alignTop="@+id/account_reviewer"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/btn_next_reviewer"
+        android:layout_alignLeft="@+id/email_reveiwer"
+        android:layout_alignStart="@+id/email_reveiwer"
+        android:layout_marginBottom="36dp" />
 
     <TextView
         android:text="@string/password___"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView8"
-        android:layout_alignTop="@+id/password_reviewer"
+        android:layout_alignBaseline="@+id/password_reviewer"
+        android:layout_alignBottom="@+id/password_reviewer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/email_reveiwer"
+        android:text="@string/email_reviewer"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:alpha=".5"
+        android:layout_above="@+id/password_reviewer"
+        android:layout_alignLeft="@+id/account_reviewer"
+        android:layout_alignStart="@+id/account_reviewer"
+        android:layout_marginBottom="27dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text|textPersonName|number"
+        android:text="@string/user_name__"
+        android:ems="10"
+        android:id="@+id/account_reviewer"
+        android:selectAllOnFocus="true"
+        android:alpha=".5"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_above="@+id/email_reveiwer"
+        android:layout_toRightOf="@+id/view_user_name"
+        android:layout_toEndOf="@+id/view_user_name"
+        android:layout_marginBottom="33dp" />
+
+    <TextView
+        android:text="@string/user_name___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_user_name"
+        android:layout_alignBottom="@+id/account_reviewer"
+        android:layout_alignLeft="@+id/textview_email_reviewer"
+        android:layout_alignStart="@+id/textview_email_reviewer" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/first_name"
+        android:ems="10"
+        android:id="@+id/ed_first_name"
+        android:layout_above="@+id/ed_last_name"
+        android:layout_alignLeft="@+id/ed_last_name"
+        android:layout_alignStart="@+id/ed_last_name"
+        android:layout_marginBottom="22dp"
+        android:alpha=".5" />
+
+    <TextView
+        android:text="@string/first_name_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_first_name"
+        android:layout_alignBottom="@+id/ed_first_name"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="@string/email_"
+        android:text="@string/last_name_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textview_email_reviewer"
-        android:layout_alignTop="@+id/email_reveiwer"
+        android:id="@+id/view_last_name"
+        android:layout_alignBottom="@+id/ed_last_name"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/last_name"
+        android:ems="10"
+        android:id="@+id/ed_last_name"
+        android:layout_marginBottom="33dp"
+        android:layout_above="@+id/account_reviewer"
+        android:layout_alignLeft="@+id/account_reviewer"
+        android:layout_alignStart="@+id/account_reviewer"
+        android:alpha=".5" />
 
 </RelativeLayout>
