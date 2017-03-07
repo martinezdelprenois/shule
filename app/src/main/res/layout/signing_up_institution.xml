@@ -131,15 +131,6 @@
         android:layout_marginBottom="33dp"
         android:id="@+id/view_category" />
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Spinner_institution"
-        android:layout_alignTop="@+id/view_category"
-        android:layout_toRightOf="@+id/view_institution_index"
-        android:layout_toEndOf="@+id/view_institution_index"
-        android:alpha=".5" />
-
     <Button
         android:text="@string/next_btn"
         android:layout_width="wrap_content"
@@ -179,4 +170,13 @@
         android:layout_alignLeft="@+id/ed_index_number"
         android:layout_alignStart="@+id/ed_index_number"
         android:selectAllOnFocus="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Spinner_institution"
+        android:alpha=".5"
+        android:layout_alignTop="@+id/view_category"
+        android:layout_toRightOf="@+id/view_personal_emal"
+        android:layout_toEndOf="@+id/view_personal_emal" />
 </RelativeLayout>
