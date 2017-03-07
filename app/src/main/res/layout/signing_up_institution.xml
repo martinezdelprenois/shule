@@ -74,21 +74,6 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/ed_institution"
-        android:layout_alignBaseline="@+id/view_institution"
-        android:layout_alignBottom="@+id/view_institution"
-        android:layout_toRightOf="@+id/view_institution_index"
-        android:layout_toEndOf="@+id/view_institution_index"
-        android:inputType="text|textCapCharacters|textCapWords"
-        android:text="@string/institution_ed"
-        android:maxLines="1"
-        android:selectAllOnFocus="true"
-        android:alpha=".5" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/index_number_ed"
         android:ems="10"
         android:id="@+id/ed_index_number"
@@ -155,19 +140,6 @@
         android:layout_toEndOf="@+id/view_institution_index"
         android:alpha=".5" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/name_ed_De"
-        android:ems="10"
-        android:id="@+id/ed_instution_website"
-        android:inputType="textWebEmailAddress"
-        android:layout_alignBaseline="@+id/view_institution_link"
-        android:layout_alignBottom="@+id/view_institution_link"
-        android:layout_alignLeft="@+id/ed_index_number"
-        android:layout_alignStart="@+id/ed_index_number"
-        android:alpha=".5" />
-
     <Button
         android:text="@string/next_btn"
         android:layout_width="wrap_content"
@@ -178,4 +150,33 @@
         android:id="@+id/btn_institution_signup"
         tools:ignore="RelativeOverlap"
         android:onClick="clicknext" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/ed_institution"
+        android:inputType="text|textCapWords"
+        android:text="@string/institution_ed"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:alpha=".5"
+        android:layout_alignBaseline="@+id/view_institution"
+        android:layout_alignBottom="@+id/view_institution"
+        android:layout_alignLeft="@+id/ed_institution_email"
+        android:layout_alignStart="@+id/ed_institution_email" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_ed_De"
+        android:ems="10"
+        android:id="@+id/ed_instution_website"
+        android:inputType="textWebEmailAddress"
+        android:alpha=".5"
+        android:layout_alignBaseline="@+id/view_institution_link"
+        android:layout_alignBottom="@+id/view_institution_link"
+        android:layout_alignLeft="@+id/ed_index_number"
+        android:layout_alignStart="@+id/ed_index_number"
+        android:selectAllOnFocus="true" />
 </RelativeLayout>

@@ -3,6 +3,7 @@ package com.example.marto.my_school_revierwer_4;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -49,7 +50,12 @@ public class Signing_institution extends Activity {
         String institution_website = ed_institution_websitelink.getText().toString();
         String institution_index = ed_institution_number.getText().toString();
         String spinning = spin.getSelectedItem().toString();
-
+        String type = "registration_institution";
+        Log.v("institutionsign", "background about to begin");
+        BackgroundTask backgroundTask = new BackgroundTask(this);
+        backgroundTask.execute(type, institution_name, institution_personal_email, institution_password, institution_email, institution_website,institution_index,
+                spinning);
+        Log.v("institutionsign","background executed");
 
                 finish();
             Intent i = new Intent(Signing_institution.this, Insitution_home.class);
