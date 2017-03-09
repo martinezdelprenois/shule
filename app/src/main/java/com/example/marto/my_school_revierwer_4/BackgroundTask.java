@@ -30,8 +30,8 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... params) {
 
         // URLS for the selections as shown right below
-        String institution_reg = "http:// 192.168.1.104/MY_SCHOOL_REVIEWER/Institutions_signup.php";
-        String individual_reg = "http://192.168.1.104/MY_SCHOOL_REVIEWER/Individuals_signup.php";
+        String institution_reg = "http://192.168.1.105/MY_SCHOOL_REVIEWER/Institutions_signup.php";
+        String individual_reg = "http://192.168.1.105/MY_SCHOOL_REVIEWER/Individuals_signup.php";
 
         String method = params[0];
 
