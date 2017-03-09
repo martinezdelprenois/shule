@@ -2,6 +2,7 @@ package com.example.marto.my_school_revierwer_4;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.widget.ArrayAdapter;
@@ -15,6 +16,8 @@ public class Home_two extends AppCompatActivity {
 
     Spinner spin_category, spin_education_level;
     ArrayAdapter<CharSequence> array_category, array_education_level;
+    Toolbar toolbar;
+    Menu menu;
 
 
 
@@ -22,6 +25,7 @@ public class Home_two extends AppCompatActivity {
     protected void onCreate(Bundle state){
         super.onCreate(state);
         setContentView(R.layout.home_two);
+
 
         category();
         education();

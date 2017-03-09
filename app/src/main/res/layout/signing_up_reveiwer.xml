@@ -150,7 +150,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@mipmap/ic_launcher"
-            android:contentDescription="@string/image_reviewer_signup" />
+            tools:ignore="ContentDescription" />
     </LinearLayout>
 
 </RelativeLayout>

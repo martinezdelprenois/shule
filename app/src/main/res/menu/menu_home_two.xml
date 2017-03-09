@@ -2,6 +2,8 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+
     <item
         android:title="@string/profile"
         android:id="@+id/profile"
@@ -17,6 +19,7 @@
     <item app:showAsAction="never"
         android:id="@+id/following_reviewer"
         android:title="@string/following"/>
+
     <item app:showAsAction="never"
         android:title="@string/share"
         android:id="@+id/share_reviewer" />
@@ -25,6 +28,7 @@
     <item app:showAsAction="never"
         android:title="@string/maps"
         android:id="@+id/maps" />
+
 
 
 </menu>
