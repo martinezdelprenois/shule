@@ -9,8 +9,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLEncoder;
 
@@ -27,8 +29,13 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
     @Override
     protected String doInBackground(String... params) {
 
-        String institution_reg = "http://192.168.1.102/MY_SCHOOL_REVIEWER/school_reviewer_institutions_signup.php";
+        // URLS for the selections as shown right below
+        String institution_reg = "http://192.168.1.105/MY_SCHOOL_REVIEWER/Institutions_signup.php";
+        String individual_reg = "http://192.168.1.105/MY_SCHOOL_REVIEWER/Individuals_signup.php";
+
         String method = params[0];
+
+        // CONDITION FOR INSTITUTION REGISTRATION WRITTEN JUST RIGHT BELOW
         if(method.equals("registration_institution")){
             String institution_name = params[1];
             String institution_personal_email =params[2];
@@ -83,6 +90,52 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             catch(IOException e){
                 e.printStackTrace();
             }
+        }
+
+        // CONDITION FOR INDIVIDUAL REGISTRATION WRITTEN JUST RIGHT BELOW
+        else if(method.equals("individual_registration")){
+            String First_Name = params[1];
+            String Last_Name =params[2];
+            String User_Name = params[3];
+            String Email = params[4];
+            String Password = params[5];
+
+
+            try{
+                URL url = new URL(individual_reg);
+                HttpURLConnection con = (HttpURLConnection) url.openConnection();
+                con.setRequestMethod("POST");
+                con.setDoOutput(true);
+                con.setDoInput(true);
+                OutputStream os = con.getOutputStream();
+                BufferedWriter writing = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
+                String data =
+                        URLEncoder.encode("First_Name", "UTF-8") + "=" +URLEncoder.encode(First_Name, "UTF-8") + "&" +
+                                URLEncoder.encode("Last_Name", "UTF-8")+ "=" + URLEncoder.encode(Last_Name, "UTF-8") + "&" +
+                                URLEncoder.encode("User_Name", "UTF-8")+ "=" + URLEncoder.encode(User_Name, "UTF-8") + "&" +
+                                URLEncoder.encode("Email", "UTF-8") + "=" + URLEncoder.encode(Email, "UTF-8") + "&" +
+                                URLEncoder.encode("Password", "UTF-8") + "=" + URLEncoder.encode(Password, "UTF-8");
+
+                writing.write(data);
+                writing.flush();
+                writing.close();
+                os.close();
+
+                InputStream is = con.getInputStream();
+                is.close();
+                con.connect();
+                con.disconnect();
+                return "registration successful";
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            } catch (ProtocolException e) {
+                e.printStackTrace();
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
         return null;
     }

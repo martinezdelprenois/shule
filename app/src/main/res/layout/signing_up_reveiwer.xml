@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <Button
@@ -8,7 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/btn_next_reviewer" />
+        android:id="@+id/btn_next_reviewer"
+        android:onClick="click_reviewer" />
 
     <TextView
         android:text="@string/email_"
@@ -22,7 +25,6 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword|numberPassword"
         android:ems="10"
         android:id="@+id/password_reviewer"
         android:text="@string/password_reviewer"
@@ -32,7 +34,9 @@
         android:layout_above="@+id/btn_next_reviewer"
         android:layout_alignLeft="@+id/email_reveiwer"
         android:layout_alignStart="@+id/email_reveiwer"
-        android:layout_marginBottom="36dp" />
+        android:layout_marginBottom="36dp"
+        android:inputType="text"
+        tools:ignore="TextFields" />
 
     <TextView
         android:text="@string/password___"
@@ -62,7 +66,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="text|textPersonName|number"
+        android:inputType="text"
         android:text="@string/user_name__"
         android:ems="10"
         android:id="@+id/account_reviewer"
@@ -73,7 +77,8 @@
         android:layout_above="@+id/email_reveiwer"
         android:layout_toRightOf="@+id/view_user_name"
         android:layout_toEndOf="@+id/view_user_name"
-        android:layout_marginBottom="33dp" />
+        android:layout_marginBottom="33dp"
+        android:maxLines="1" />
 
     <TextView
         android:text="@string/user_name___"
@@ -95,7 +100,9 @@
         android:layout_alignLeft="@+id/ed_last_name"
         android:layout_alignStart="@+id/ed_last_name"
         android:layout_marginBottom="22dp"
-        android:alpha=".5" />
+        android:alpha=".5"
+        android:selectAllOnFocus="true"
+        android:maxLines="1" />
 
     <TextView
         android:text="@string/first_name_"
@@ -126,6 +133,24 @@
         android:layout_above="@+id/account_reviewer"
         android:layout_alignLeft="@+id/account_reviewer"
         android:layout_alignStart="@+id/account_reviewer"
-        android:alpha=".5" />
+        android:alpha=".5"
+        android:selectAllOnFocus="true"
+        android:maxLines="1" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ed_first_name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/image_reviewer_signup" />
+    </LinearLayout>
 
 </RelativeLayout>
