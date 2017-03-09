@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <item android:title="@string/sharing"
         android:id="@+id/share"
         android:icon="@android:drawable/ic_menu_share"
-       android:showAsAction="ifRoom"
-        tools:ignore="AppCompatResource"
-        app:showAsAction="always" />
-    <item android:title="@string/reviewsss"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction"
+        android:visible="true"
+        />
+
+
+    <item android:title="@string/reviewssssss"
+        android:icon="@drawable/ic_action_reviews"
+        app:showAsAction="always"
         android:id="@+id/reviews"
-        android:showAsAction="ifRoom"
-        tools:ignore="AppCompatResource"
-        android:icon="@drawable/ic_action_name">
+        android:visible="true"
+
+        />
+
+    <item android:title="@string/chat"
+        android:icon="@drawable/ic_action_chat"
+        app:showAsAction="always"
+        android:id="@+id/chat"
+        android:visible="true" />
 
 </menu>
