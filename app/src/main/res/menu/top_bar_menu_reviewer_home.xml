@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/account"
+        android:id="@+id/account_reviewer"
+        app:showAsAction="never"
+        />
+
+    <item android:title="@string/following_reviewer"
+        android:id="@+id/following"
+        app:showAsAction="never"/>
+
+    <item android:title="@string/logout_reviewer"
+        android:id="@+id/Logout"
+        app:showAsAction="never"/>
+</menu>

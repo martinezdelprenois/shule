@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -16,7 +15,7 @@ public class Home_two extends AppCompatActivity {
 
     Spinner spin_category, spin_education_level;
     ArrayAdapter<CharSequence> array_category, array_education_level;
-    Toolbar toolbar;
+   private Toolbar tb_top,tb_bottom;
     Menu menu;
 
 
@@ -26,20 +25,36 @@ public class Home_two extends AppCompatActivity {
         super.onCreate(state);
         setContentView(R.layout.home_two);
 
-
+// methods for spinners as shown below
         category();
         education();
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu men){
-        MenuInflater inflate = getMenuInflater();
-        inflate.inflate(R.menu.menu_home_two,men);
-        return true;
+        // methods fort the bars as shown below
+        topbar();
+        bottombar();
     }
 
 
+
+    /*
+    below is the method for the top toolbar in the
+    reviwer's home screen
+
+     */
+
+    private void topbar(){
+        tb_top = (Toolbar)findViewById(R.id.tb_top_reviewer);
+        tb_top.inflateMenu(R.menu.top_bar_menu_reviewer_home);
+    }
+
+    /*
+    below is the method for the bottom toolbar in the reviewer's home screen
+
+     */
+    private void bottombar(){
+        tb_bottom = (Toolbar)findViewById(R.id.tb_bottom_reviewer);
+        tb_bottom.inflateMenu(R.menu.bottom_bar_menu_reviewer_home);
+    }
 
     private void category(){
         spin_category = (Spinner) findViewById(R.id.spinner_categories);

@@ -89,6 +89,15 @@
     <string name="reviewsss">Reviews</string>
     <string name="reviewssssss">Reviews</string>
     <string name="chat">Chat</string>
+    <string name="search_school">SEARCH SCHOOL</string>
+    <string name="school_home">SCHOOL HOME</string>
+    <string name="account">Account</string>
+    <string name="following_reviewer">Following</string>
+    <string name="logout_reviewer">Logout</string>
+    <string name="map">Map</string>
+    <string name="share_reviewer">Share</string>
+    <string name="write_reviews">Write Reviews</string>
+    <string name="search_school_reviewer">SEARCH SCHOOL</string>
 
 
     <!-- STRINGS FOR INTRO_SLIDERS AS SHOWN ABOVE-->
