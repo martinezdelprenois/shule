@@ -1,9 +1,10 @@
 package com.example.marto.my_school_revierwer_4;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -16,8 +17,8 @@ public class Home_two extends AppCompatActivity {
     Spinner spin_category, spin_education_level;
     ArrayAdapter<CharSequence> array_category, array_education_level;
    private Toolbar tb_top,tb_bottom;
-    Menu menu;
-
+    Intent share;
+    String sharebody = "Dowload My School Reviewer App";
 
 
     @Override
@@ -54,6 +55,25 @@ public class Home_two extends AppCompatActivity {
     private void bottombar(){
         tb_bottom = (Toolbar)findViewById(R.id.tb_bottom_reviewer);
         tb_bottom.inflateMenu(R.menu.bottom_bar_menu_reviewer_home);
+        tb_bottom.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener(){
+
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+
+                switch(item.getItemId()){
+                    case R.id.share_reviwer:
+                        share = new Intent(android.content.Intent.ACTION_SEND);
+                        share.setType("text/plain");
+                        share.putExtra(Intent.EXTRA_SUBJECT," Download My School Reviewer app");
+                        share.putExtra(Intent.EXTRA_TEXT,sharebody);
+                        startActivity(Intent.createChooser(share,"Share"));
+                        return true;
+
+
+                }
+                return false;
+            }
+        });
     }
 
     private void category(){
