@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item android:title="@string/share_reviewer"
+        android:id="@+id/share_reviwer"
+        android:icon="@android:drawable/ic_menu_share"
+        app:showAsAction="always"
+        android:visible="true"
+        tools:ignore="AlwaysShowAction" />
+
+
+    <item android:title="@string/write_reviews"
+        android:icon="@drawable/ic_action_reviews"
+        app:showAsAction="always"
+        android:id="@+id/reviews"
+        android:visible="true"
+
+        />
+
+    <item android:title="@string/map"
+        android:icon="@android:drawable/ic_dialog_map"
+        app:showAsAction="always"
+        android:id="@+id/Map"
+        android:visible="true" />
+</menu>
