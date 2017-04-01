@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <tab>
+        <tab
+            android:title="Account"
+            android:icon="@drawable/ic_school_account"
+            android:id="@+id/school_account"
+            android:visible="true" />
+        <tab
+            android:title="@string/chat"
+            android:icon="@drawable/ic_action_chat"
+            android:id="@+id/chat"
+            android:visible="true" />
+
+        <tab
+            android:title="@string/reviewssssss"
+            android:icon="@drawable/ic_reviews_read"
+            android:id="@+id/reviews"
+            android:visible="true" />
+
+        <tab
+            android:title="@string/sharing"
+            android:id="@+id/share_institute"
+            android:icon="@android:drawable/ic_menu_share"
+            android:visible="true"
+             />
+
+        <tab
+            android:title="@string/chat"
+            android:icon="@drawable/ic_logout"
+            android:id="@+id/logou_school"
+            android:visible="true" />
+    </tab>
+</PreferenceScreen>

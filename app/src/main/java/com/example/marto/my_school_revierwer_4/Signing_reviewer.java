@@ -28,7 +28,7 @@ public class Signing_reviewer extends Activity implements View.OnClickListener{
     Button btn;
 
 
-    private final String ROOT_URL = "http://192.168.43.102/";
+    private final String ROOT_URL = "http://10.3.37.78/";
     @Override
     protected void onCreate(Bundle state){
         super.onCreate(state);

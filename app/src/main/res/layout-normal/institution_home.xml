@@ -9,9 +9,10 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="363dp"
+        android:orientation="vertical"
         android:layout_below="@+id/tb_insti_1"
-        android:layout_centerHorizontal="true"
-        android:orientation="vertical">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <ImageView
             android:id="@+id/imageView4"
@@ -23,21 +24,7 @@
             app:srcCompat="@mipmap/ic_launcher" />
     </LinearLayout>
 
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:theme="?attr/actionBarTheme"
-        android:minHeight="?attr/actionBarSize"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/tb_insti_2"
-        app:contentInsetStartWithNavigation="0dp"
-        app:contentInsetLeft="0dp"
-        app:contentInsetStart="0dp"
 
-        />
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -65,6 +52,14 @@
         android:layout_gravity="center"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true" />
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:bb_tabXmlResource="@xml/institution_home_menu"
+        app:bb_behavior="underNavbar"/>
 
 
 

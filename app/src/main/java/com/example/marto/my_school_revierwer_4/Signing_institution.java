@@ -29,7 +29,7 @@ public class Signing_institution extends Activity implements View.OnClickListene
     EditText ed_institution_name, ed_personal_email, ed_password, ed_institution_email, ed_institution_websitelink, ed_institution_number;
     Spinner spin,spin_cat;
     ArrayAdapter<CharSequence> institution_category, institution_level;
-    private final String ROOT_URL = "http://192.168.43.102/";
+    private final String ROOT_URL = "http://10.3.37.78/";
    private Button btn;
     @Override
     protected void onCreate(Bundle state) {
@@ -41,8 +41,8 @@ public class Signing_institution extends Activity implements View.OnClickListene
 
         // instantiating the edittexts
         ed_institution_name = (EditText)findViewById(R.id.ed_institution_insti_2);
-        ed_personal_email = (EditText)findViewById(R.id.ed_institution_insti_2);
-        ed_password = (EditText)findViewById(R.id.ed_institution_insti_2);
+        ed_personal_email = (EditText)findViewById(R.id.ed_email_insti);
+        ed_password = (EditText)findViewById(R.id.ed_password_insti);
         ed_institution_websitelink = (EditText)findViewById(R.id.ed_website_insti);
         ed_institution_number = (EditText)findViewById(R.id.ed_index_insti);
 

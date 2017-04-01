@@ -2,9 +2,11 @@ package com.example.marto.my_school_revierwer_4;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
+
+import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.OnTabSelectListener;
 
 /**
  * Created by marto on 13-Feb-17.
@@ -12,53 +14,42 @@ import android.view.MenuItem;
 
 public class Insitution_home extends AppCompatActivity {
 
-    Toolbar bottomtb;
+    BottomBar bottomtb;
     Intent intent_share; // share intent
-   private String sharebody = "Download My School Review app at Google play store";
+    private String sharebody = "Download My School Review app at Google play store";
 
     @Override
-    protected void onCreate(Bundle state){
+    protected void onCreate(Bundle state) {
         super.onCreate(state);
         setContentView(R.layout.institution_home);
 
         // instantiating the toolbars
-        bottombar();
+        bottombars();
 
     }
-
 
 
     /*
     bottom toolbar as shown below
      */
-    public void bottombar(){
-         /*
-        instantiating the bottom tool bar
-         */
-        bottomtb = (Toolbar)findViewById(R.id.tb_insti_2);
-        bottomtb.inflateMenu(R.menu.bottom_menu_institution);
-        bottomtb.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener(){
 
+
+    public void bottombars() {
+        bottomtb = (BottomBar) findViewById(R.id.bottomBar);
+        bottomtb.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                switch(item.getItemId()){
-                    case R.id.share_institute:
-                        intent_share = new Intent(android.content.Intent.ACTION_SEND);
-                        intent_share.setType("text/plain");
-                        intent_share.putExtra(Intent.EXTRA_SUBJECT," Download My School Reviewer app");
-                        intent_share.putExtra(Intent.EXTRA_TEXT,sharebody);
-                        startActivity(Intent.createChooser(intent_share,"Share"));
-                        return true;
-
-
+            public void onTabSelected(@IdRes int tabId) {
+                if (tabId == R.id.share_institute) {
+                    intent_share = new Intent(android.content.Intent.ACTION_SEND);
+                    intent_share.setType("text/plain");
+                    intent_share.putExtra(Intent.EXTRA_SUBJECT, " Download My School Reviewer app");
+                    intent_share.putExtra(Intent.EXTRA_TEXT, sharebody);
+                    startActivity(Intent.createChooser(intent_share, "Share"));
                 }
 
-                return false;
             }
         });
 
     }
-
-
-
 }
+

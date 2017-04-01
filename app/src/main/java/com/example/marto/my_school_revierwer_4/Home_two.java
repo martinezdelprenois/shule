@@ -58,8 +58,8 @@ public class Home_two extends AppCompatActivity {
         flipper.setAutoStart(true);
         flipper.setFlipInterval(3000);
 
-        String urlimage = "http://192.168.43.102/MY_SCHOOL_REVIEWER/IMAGES/snake.png";
-        String urlimage2 = "http://192.168.43.102/MY_SCHOOL_REVIEWER/IMAGES/webstar.png";
+        String urlimage = "http://10.3.37.78/MY_SCHOOL_REVIEWER/IMAGES/snake.png";
+        String urlimage2 = "http://10.3.37.78/MY_SCHOOL_REVIEWER/IMAGES/webstar.png";
 
         Glide.with(Home_two.this).load(urlimage).into(v1);
         Glide.with(Home_two.this).load(urlimage2).into(v2);
