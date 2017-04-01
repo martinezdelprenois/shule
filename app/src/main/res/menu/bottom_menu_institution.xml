@@ -3,15 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-
-    <item android:title="@string/sharing"
-        android:id="@+id/share_institute"
-        android:icon="@android:drawable/ic_menu_share"
+    <item android:title="@string/chat"
+        android:icon="@drawable/ic_school_account"
         app:showAsAction="always"
-        android:visible="true"
-        tools:ignore="AlwaysShowAction" />
+        android:id="@+id/school_account"
+        android:visible="true" />
 
+    <item android:title="@string/chat"
+        android:icon="@drawable/ic_action_chat"
+        app:showAsAction="always"
+        android:id="@+id/chat"
+        android:visible="true" />
 
     <item android:title="@string/reviewssssss"
         android:icon="@drawable/ic_reviews_read"
@@ -21,10 +23,18 @@
 
         />
 
-    <item android:title="@string/chat"
-        android:icon="@drawable/ic_action_chat"
+    <item android:title="@string/sharing"
+        android:id="@+id/share_institute"
+        android:icon="@android:drawable/ic_menu_share"
         app:showAsAction="always"
-        android:id="@+id/chat"
+        android:visible="true"
+        tools:ignore="AlwaysShowAction" />
+
+
+    <item android:title="@string/chat"
+        android:icon="@drawable/ic_logout"
+        app:showAsAction="always"
+        android:id="@+id/logou_school"
         android:visible="true" />
 
 </menu>

@@ -12,7 +12,7 @@ import android.view.MenuItem;
 
 public class Insitution_home extends AppCompatActivity {
 
-    Toolbar toptb, bottomtb;
+    Toolbar bottomtb;
     Intent intent_share; // share intent
    private String sharebody = "Download My School Review app at Google play store";
 
@@ -22,28 +22,11 @@ public class Insitution_home extends AppCompatActivity {
         setContentView(R.layout.institution_home);
 
         // instantiating the toolbars
-
-       topbar();
         bottombar();
 
     }
 
-    public  void topbar(){
-         /*
-        instanstiating the top tool bar
-         */
-        toptb = (Toolbar)findViewById(R.id.tb_insti_1);
-        toptb.inflateMenu(R.menu.menu_for_institution);
-        toptb.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener(){
 
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-
-
-                return false;
-            }
-        });
-    }
 
     /*
     bottom toolbar as shown below

@@ -6,7 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.ViewFlipper;
+
+import com.bumptech.glide.Glide;
 
 /**
  * Created by marto on 07-Feb-17.
@@ -16,9 +20,12 @@ public class Home_two extends AppCompatActivity {
 
     Spinner spin_category, spin_education_level;
     ArrayAdapter<CharSequence> array_category, array_education_level;
-   private Toolbar tb_top,tb_bottom;
+   private Toolbar tb_bottom;
     Intent share;
     String sharebody = "Dowload My School Reviewer App";
+
+    ViewFlipper flipper;
+    ImageView v1,v2;
 
 
     @Override
@@ -30,24 +37,34 @@ public class Home_two extends AppCompatActivity {
         category();
         education();
 
-        // methods fort the bars as shown below
-        topbar();
+
         bottombar();
+
+        // the view flipper
+        flipper = (ViewFlipper)findViewById(R.id.flipper_individual);
+        v1 = (ImageView)findViewById(R.id.img_1);
+        v2 = (ImageView)findViewById(R.id.img_2);
+
+        //method
+        flip();
+
     }
 
 
 
-    /*
-    below is the method for the top toolbar in the
-    reviwer's home screen
+    //method for the view flipper below
 
-     */
+    private void flip(){
+        flipper.setAutoStart(true);
+        flipper.setFlipInterval(3000);
 
-    private void topbar(){
-        tb_top = (Toolbar)findViewById(R.id.tb_top_reviewer);
-        tb_top.inflateMenu(R.menu.top_bar_menu_reviewer_home);
+        String urlimage = "http://192.168.43.102/MY_SCHOOL_REVIEWER/IMAGES/snake.png";
+        String urlimage2 = "http://192.168.43.102/MY_SCHOOL_REVIEWER/IMAGES/webstar.png";
+
+        Glide.with(Home_two.this).load(urlimage).into(v1);
+        Glide.with(Home_two.this).load(urlimage2).into(v2);
+
     }
-
     /*
     below is the method for the bottom toolbar in the reviewer's home screen
 

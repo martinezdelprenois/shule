@@ -105,25 +105,29 @@
             android:id="@+id/tb_top_reviewer"
             android:title="@string/search_school"/>
 
-
         <ViewFlipper
             android:id="@+id/flipper_individual"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/image_for_individual_home">
-        <ImageView
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:id="@+id/img_1"
-            android:contentDescription=""
-            tools:ignore="ContentDescription" />
+            <ImageView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/img_1"
+                android:contentDescription=""
+                tools:ignore="ContentDescription" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/img_2"
-            tools:ignore="ContentDescription" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/img_2"
+                tools:ignore="ContentDescription" />
+
         </ViewFlipper>
+
+
+
+
     </LinearLayout>
 
     <TextView

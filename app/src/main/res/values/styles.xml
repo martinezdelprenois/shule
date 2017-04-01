@@ -8,6 +8,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/background_material_dark</item>
+        <item name="android:colorForeground">@color/foreground_material_dark</item>
+        <item name="android:textColorPrimary">@color/dot_inactive1</item>
+        <item name="android:windowBackground">?attr/colorButtonNormal</item>
+        <item name="android:textColorSecondary">@color/cardview_dark_background</item>
+        <item name="android:textColorPrimaryInverse">@color/cardview_dark_background</item>
 
 
     </style>

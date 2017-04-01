@@ -19,7 +19,7 @@
         android:id="@+id/imageView"
         android:contentDescription="@string/splash_screen"
         android:scaleType="fitCenter"
-        android:layout_marginTop="338dp"
+        android:layout_marginTop="197dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

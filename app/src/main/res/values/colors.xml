@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#33bfde</color>
+    <color name="colorPrimaryDark">#e50b0b</color>
+    <color name="colorAccent">#d81e1e</color>
 
     <!-- BACKGROUND COLORS FOR THE INTRO_ INSTITUTION PART-->
     <color name="bg_1"> #b12515</color>
@@ -15,9 +15,10 @@
     <color name="dot_active3">#000000</color>
 
     <!-- DOTS INACTIVE COLORS-->
-        <color name="dot_inactive1"> #cccccc</color>
+        <color name="dot_inactive1">#cccccc</color>
     <color name="dot_inactive2">#cccccc</color>
     <color name="dot_inactive3">#cccccc</color>
+    <color name="foreground_material_dark">#050505</color>
 
     <array name="actives">
         <item> @color/dot_active1</item>

@@ -3,15 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-
-    <item android:title="@string/share_reviewer"
-        android:id="@+id/share_reviwer"
-        android:icon="@android:drawable/ic_menu_share"
+    <item android:title="@string/write_reviews"
+        android:icon="@drawable/ic_account"
         app:showAsAction="always"
+        android:id="@+id/reviewer_accont"
         android:visible="true"
-        tools:ignore="AlwaysShowAction" />
 
+        />
 
     <item android:title="@string/write_reviews"
         android:icon="@drawable/ic_action_reviews"
@@ -26,4 +24,19 @@
         app:showAsAction="always"
         android:id="@+id/Map"
         android:visible="true" />
+
+    <item android:title="@string/share_reviewer"
+        android:id="@+id/share_reviwer"
+        android:icon="@android:drawable/ic_menu_share"
+        app:showAsAction="always"
+        android:visible="true"
+        tools:ignore="AlwaysShowAction" />
+
+    <item android:title="@string/write_reviews"
+    android:icon="@drawable/ic_logout"
+    app:showAsAction="always"
+    android:id="@+id/logout_reviewer"
+    android:visible="true"
+
+    />
 </menu>
