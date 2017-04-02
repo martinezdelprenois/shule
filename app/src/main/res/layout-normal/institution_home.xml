@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:design="http://schemas.android.com/design">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -53,13 +54,18 @@
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true" />
 
-    <com.roughike.bottombar.BottomBar
-        android:id="@+id/bottomBar"
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="#00f"
+        design:menu="@menu/bottom_menu_institution"
         android:layout_alignParentBottom="true"
-        app:bb_tabXmlResource="@xml/institution_home_menu"
-        app:bb_behavior="underNavbar"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        design:itemIconTint="#fff"/>
+
 
 
 

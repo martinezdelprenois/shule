@@ -117,6 +117,7 @@ public class Intro_institution extends Activity {
     private int getitem(int i){
         return pager.getCurrentItem() + 1;
     }
+
     ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener(){
 
 

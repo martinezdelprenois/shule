@@ -24,6 +24,7 @@
         <activity android:name=".Insitution_home"></activity>
         <activity android:name=".Home_one"></activity>
         <activity android:name=".Intro_institution"></activity>
+        <activity android:name=".SwipeViews.Introduction"></activity>
     </application>
 
 </manifest>
