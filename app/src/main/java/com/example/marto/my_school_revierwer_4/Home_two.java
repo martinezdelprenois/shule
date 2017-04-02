@@ -2,6 +2,8 @@ package com.example.marto.my_school_revierwer_4;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -27,6 +29,9 @@ public class Home_two extends AppCompatActivity {
     ViewFlipper flipper;
     ImageView v1,v2;
 
+    BottomNavigationView v;
+
+
 
     @Override
     protected void onCreate(Bundle state){
@@ -38,6 +43,7 @@ public class Home_two extends AppCompatActivity {
         education();
 
 
+        v = (BottomNavigationView)findViewById(R.id.navigation2);
         bottombar();
 
         // the view flipper
@@ -70,27 +76,22 @@ public class Home_two extends AppCompatActivity {
 
      */
     private void bottombar(){
-        tb_bottom = (Toolbar)findViewById(R.id.tb_bottom_reviewer);
-        tb_bottom.inflateMenu(R.menu.bottom_bar_menu_reviewer_home);
-        tb_bottom.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener(){
+     v.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+         @Override
+         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
+             switch (item.getItemId()){
+                 case R.id.share_reviwer:
+                     share = new Intent(android.content.Intent.ACTION_SEND);
+                     share.setType("text/plain");
+                     share.putExtra(Intent.EXTRA_SUBJECT, " Download My School Reviewer app");
+                     share.putExtra(Intent.EXTRA_TEXT, sharebody);
+                     startActivity(Intent.createChooser(share, "Share"));
 
-                switch(item.getItemId()){
-                    case R.id.share_reviwer:
-                        share = new Intent(android.content.Intent.ACTION_SEND);
-                        share.setType("text/plain");
-                        share.putExtra(Intent.EXTRA_SUBJECT," Download My School Reviewer app");
-                        share.putExtra(Intent.EXTRA_TEXT,sharebody);
-                        startActivity(Intent.createChooser(share,"Share"));
-                        return true;
-
-
-                }
-                return false;
-            }
-        });
+             }
+             return false;
+         }
+     });
     }
 
     private void category(){

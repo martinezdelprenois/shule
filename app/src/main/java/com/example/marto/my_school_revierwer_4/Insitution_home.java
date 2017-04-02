@@ -7,15 +7,12 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.roughike.bottombar.BottomBar;
-
 /**
  * Created by marto on 13-Feb-17.
  */
 
 public class Insitution_home extends AppCompatActivity {
 
-    BottomBar bottomtb;
     Intent intent_share; // share intent
     private String sharebody = "Download My School Review app at Google play store";
     BottomNavigationView vv;

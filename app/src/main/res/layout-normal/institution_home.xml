@@ -59,12 +59,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:background="#00f"
-        design:menu="@menu/bottom_menu_institution"
+        android:background="#2f5f96"
+        app:menu="@menu/bottom_menu_institution"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        design:itemIconTint="#fff"/>
+        app:itemIconTint="#fff"
+        />
 
 
 
