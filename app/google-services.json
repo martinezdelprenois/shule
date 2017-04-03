@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "706784596554",
+    "firebase_url": "https://second-3c329.firebaseio.com",
+    "project_id": "second-3c329",
+    "storage_bucket": "second-3c329.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706784596554:android:e320575b516fd529",
+        "android_client_info": {
+          "package_name": "com.example.marto.my_school_revierwer_4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706784596554-st8pl41f16gi5b70okn9qicpfnj53ad7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr0jXt9hqNrjEsfFBfedRbXLsusld_QZA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
