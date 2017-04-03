@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.marto.my_school_revierwer_4.SwipeViews.Introduction;
+
 public class Splash_Screen extends AppCompatActivity {
 
     @Override
@@ -16,7 +18,7 @@ public class Splash_Screen extends AppCompatActivity {
             public void run(){
                 try{
                     sleep(3000);
-                    Intent i = new Intent(getApplicationContext(), Home_one.class);
+                    Intent i = new Intent(getApplicationContext(), Introduction.class);
                     startActivity(i);
                     finish();
                 }

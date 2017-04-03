@@ -16,10 +16,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/splash_screen"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="210dp"
         android:id="@+id/imageView"
         android:contentDescription="@string/splash_screen"
-        android:scaleType="fitCenter" />
+        android:scaleType="fitCenter"
+        android:layout_marginTop="338dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

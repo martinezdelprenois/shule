@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:text="@string/next_reviewer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btn_next_reviewer"
+        android:onClick="click_reviewer"
+        android:textSize="40sp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/password_reviewer"
+        android:text="@string/password_reviewer"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:alpha=".5"
+        android:layout_above="@+id/btn_next_reviewer"
+        android:layout_alignLeft="@+id/email_reveiwer"
+        android:layout_alignStart="@+id/email_reveiwer"
+        android:layout_marginBottom="36dp"
+        android:inputType="text"
+        tools:ignore="TextFields"
+        android:minHeight="40sp"
+        android:textSize="40sp"/>
+
+    <TextView
+        android:text="@string/password___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8"
+        android:layout_alignBaseline="@+id/password_reviewer"
+        android:layout_alignBottom="@+id/password_reviewer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="40sp"/>
+
+    <TextView
+        android:text="@string/first_name_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_first_name"
+        android:layout_alignBottom="@+id/ed_first_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="40sp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="546dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout4">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/email_reveiwer"
+        android:text="@string/email_reviewer"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:alpha=".5"
+        android:layout_marginBottom="60dp"
+        android:layout_above="@+id/password_reviewer"
+        android:layout_alignLeft="@+id/account_reviewer"
+        android:layout_alignStart="@+id/account_reviewer"
+        android:minHeight="40sp"
+        android:textSize="40sp"/>
+
+    <TextView
+        android:text="@string/email_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview_email_reviewer"
+        android:textSize="40sp"
+        android:layout_alignBottom="@+id/email_reveiwer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/last_name_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_last_name"
+        android:textSize="40sp"
+        android:layout_alignTop="@+id/ed_last_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/user_name___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_user_name"
+        android:textSize="40sp"
+        android:layout_above="@+id/email_reveiwer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="@string/user_name__"
+        android:ems="10"
+        android:id="@+id/account_reviewer"
+        android:selectAllOnFocus="true"
+        android:alpha=".5"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp"
+        android:maxLines="1"
+        android:minHeight="40sp"
+        android:textSize="40sp"
+        android:layout_alignBottom="@+id/view_user_name"
+        android:layout_toRightOf="@+id/view_user_name"
+        android:layout_toEndOf="@+id/view_user_name" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/last_name"
+        android:ems="10"
+        android:id="@+id/ed_last_name"
+        android:alpha=".5"
+        android:selectAllOnFocus="true"
+        android:maxLines="1"
+        android:minHeight="40sp"
+        android:textSize="40sp"
+        android:layout_above="@+id/account_reviewer"
+        android:layout_alignLeft="@+id/account_reviewer"
+        android:layout_alignStart="@+id/account_reviewer"
+        android:layout_marginBottom="27dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/first_name"
+        android:ems="10"
+        android:id="@+id/ed_first_name"
+        android:alpha=".5"
+        android:selectAllOnFocus="true"
+        android:maxLines="1"
+        android:minHeight="40sp"
+        android:textSize="40sp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/ed_last_name"
+        android:layout_alignStart="@+id/ed_last_name" />
+
+</RelativeLayout>

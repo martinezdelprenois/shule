@@ -2,11 +2,17 @@ package com.example.marto.my_school_revierwer_4;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.ViewFlipper;
+
+import com.bumptech.glide.Glide;
 
 /**
  * Created by marto on 07-Feb-17.
@@ -16,9 +22,15 @@ public class Home_two extends AppCompatActivity {
 
     Spinner spin_category, spin_education_level;
     ArrayAdapter<CharSequence> array_category, array_education_level;
-   private Toolbar tb_top,tb_bottom;
+   private Toolbar tb_bottom;
     Intent share;
     String sharebody = "Dowload My School Reviewer App";
+
+    ViewFlipper flipper;
+    ImageView v1,v2;
+
+    BottomNavigationView v;
+
 
 
     @Override
@@ -30,50 +42,56 @@ public class Home_two extends AppCompatActivity {
         category();
         education();
 
-        // methods fort the bars as shown below
-        topbar();
+
+        v = (BottomNavigationView)findViewById(R.id.navigation2);
         bottombar();
+
+        // the view flipper
+        flipper = (ViewFlipper)findViewById(R.id.flipper_individual);
+        v1 = (ImageView)findViewById(R.id.img_1);
+        v2 = (ImageView)findViewById(R.id.img_2);
+
+        //method
+        flip();
+
     }
 
 
 
-    /*
-    below is the method for the top toolbar in the
-    reviwer's home screen
+    //method for the view flipper below
 
-     */
+    private void flip(){
+        flipper.setAutoStart(true);
+        flipper.setFlipInterval(3000);
 
-    private void topbar(){
-        tb_top = (Toolbar)findViewById(R.id.tb_top_reviewer);
-        tb_top.inflateMenu(R.menu.top_bar_menu_reviewer_home);
+        String urlimage = "http://10.3.37.78/MY_SCHOOL_REVIEWER/IMAGES/snake.png";
+        String urlimage2 = "http://10.3.37.78/MY_SCHOOL_REVIEWER/IMAGES/webstar.png";
+
+        Glide.with(Home_two.this).load(urlimage).into(v1);
+        Glide.with(Home_two.this).load(urlimage2).into(v2);
+
     }
-
     /*
     below is the method for the bottom toolbar in the reviewer's home screen
 
      */
     private void bottombar(){
-        tb_bottom = (Toolbar)findViewById(R.id.tb_bottom_reviewer);
-        tb_bottom.inflateMenu(R.menu.bottom_bar_menu_reviewer_home);
-        tb_bottom.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener(){
+     v.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+         @Override
+         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
+             switch (item.getItemId()){
+                 case R.id.share_reviwer:
+                     share = new Intent(android.content.Intent.ACTION_SEND);
+                     share.setType("text/plain");
+                     share.putExtra(Intent.EXTRA_SUBJECT, " Download My School Reviewer app");
+                     share.putExtra(Intent.EXTRA_TEXT, sharebody);
+                     startActivity(Intent.createChooser(share, "Share"));
 
-                switch(item.getItemId()){
-                    case R.id.share_reviwer:
-                        share = new Intent(android.content.Intent.ACTION_SEND);
-                        share.setType("text/plain");
-                        share.putExtra(Intent.EXTRA_SUBJECT," Download My School Reviewer app");
-                        share.putExtra(Intent.EXTRA_TEXT,sharebody);
-                        startActivity(Intent.createChooser(share,"Share"));
-                        return true;
-
-
-                }
-                return false;
-            }
-        });
+             }
+             return false;
+         }
+     });
     }
 
     private void category(){

@@ -3,27 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/reviewer_accont"
+        android:icon="@drawable/ic_account"
+        android:title="Account"
+        android:visible="true"
+        app:showAsAction="always"
 
+        tools:ignore="HardcodedText" />
 
-    <item android:title="@string/share_reviewer"
+    <item
+        android:id="@+id/reviews"
+        android:icon="@drawable/ic_action_reviews"
+        android:title="Write Review"
+        android:visible="true"
+        app:showAsAction="always"
+
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/Map"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:title="Map"
+        android:visible="true"
+        app:showAsAction="always"
+        tools:ignore="HardcodedText" />
+
+    <item
         android:id="@+id/share_reviwer"
         android:icon="@android:drawable/ic_menu_share"
-        app:showAsAction="always"
+        android:title="Share"
         android:visible="true"
-        tools:ignore="AlwaysShowAction" />
-
-
-    <item android:title="@string/write_reviews"
-        android:icon="@drawable/ic_action_reviews"
         app:showAsAction="always"
-        android:id="@+id/reviews"
+        tools:ignore="AlwaysShowAction,HardcodedText" />
+
+    <item
+        android:id="@+id/logout_reviewer"
+        android:icon="@drawable/ic_logout"
+        android:title="Log out"
         android:visible="true"
-
-        />
-
-    <item android:title="@string/map"
-        android:icon="@android:drawable/ic_dialog_map"
         app:showAsAction="always"
-        android:id="@+id/Map"
-        android:visible="true" />
+
+        tools:ignore="HardcodedText" />
 </menu>

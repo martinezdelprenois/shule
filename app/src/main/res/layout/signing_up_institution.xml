@@ -1,183 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        tools:ignore="ExtraText">
 
 
-    <TextView
-        android:text="@string/institution_ed_ed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="45dp"
-        android:id="@+id/view_institution" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/password_ed"
-        android:ems="10"
-        android:id="@+id/ed_password_institution"
-        android:layout_alignBottom="@+id/view_password"
-        android:layout_alignLeft="@+id/ed_personal_email"
-        android:layout_alignStart="@+id/ed_personal_email"
-        android:selectAllOnFocus="true"
-        android:inputType="textPassword"
-        android:alpha=".5"
-        android:maxLines="1" />
 
-    <TextView
-        android:text="@string/personal_email_ed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="66dp"
-        android:id="@+id/view_personal_emal"
-        android:layout_below="@+id/ed_institution"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"> </android.support.v7.widget.Toolbar>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGNING UP"
+            tools:ignore="HardcodedText"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_alignBottom="@+id/toolbar"
+            android:layout_centerHorizontal="true" />/>
 
-    <TextView
-        android:text="@string/password_ed_ed_ed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/view_password"
-        android:layout_marginTop="70dp"
-        android:layout_below="@+id/view_personal_emal"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="55dp"
+            android:text="Institution"
+            tools:ignore="HardcodedText" />
 
-    <TextView
-        android:text="@string/institution_index_number_ed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/view_institution_index"
-        android:layout_alignBottom="@+id/ed_index_number"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <EditText
+            android:id="@+id/ed_institution_insti_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            tools:ignore="HardcodedText" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/index_number_ed"
-        android:ems="10"
-        android:id="@+id/ed_index_number"
-        android:layout_marginBottom="87dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/view_institution_index"
-        android:layout_toEndOf="@+id/view_institution_index"
-        android:selectAllOnFocus="true"
-        android:alpha=".5"
-        android:inputType="text"
-        android:maxLines="1"
-        tools:ignore="TextFields" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="55dp"
+            android:text="Personal Email"
+            tools:ignore="HardcodedText" />
 
-    <TextView
-        android:text="@string/institution_website_ed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/view_institution_link"
-        android:layout_marginBottom="38dp"
-        android:layout_above="@+id/ed_index_number"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <EditText
+            android:id="@+id/ed_email_insti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignLeft="@+id/ed_institution_insti_2"
+            android:layout_alignStart="@+id/ed_institution_insti_2"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            tools:ignore="HardcodedText" />
 
-    <TextView
-        android:text="@string/institution_email_ed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/view_school_email"
-        android:layout_marginBottom="38dp"
-        android:layout_above="@+id/ed_instution_website"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="54dp"
+            android:text="Password"
+            tools:ignore="HardcodedText" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/institution_email_ed_ed"
-        android:ems="10"
-        android:id="@+id/ed_institution_email"
-        android:layout_alignBottom="@+id/view_school_email"
-        android:layout_alignLeft="@+id/ed_instution_website"
-        android:layout_alignStart="@+id/ed_instution_website"
-        android:alpha=".5"
-        android:selectAllOnFocus="true"
-        android:inputType="textEmailAddress"
-        android:maxLines="1" />
+        <EditText
+            android:id="@+id/ed_password_insti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_alignLeft="@+id/ed_email_insti"
+            android:layout_alignStart="@+id/ed_email_insti"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            tools:ignore="HardcodedText" />
 
-    <TextView
-        android:text="@string/category_ed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/view_institution"
-        android:layout_alignEnd="@+id/view_institution"
-        android:layout_marginBottom="33dp"
-        android:id="@+id/view_category" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView4"
+            android:layout_marginTop="58dp"
+            android:text="Institution Website"
+            tools:ignore="HardcodedText"
+            android:layout_toLeftOf="@+id/ed_website_insti"
+            android:layout_toStartOf="@+id/ed_website_insti" />
 
-    <Button
-        android:text="@string/next_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/btn_institution_signup"
-        tools:ignore="RelativeOverlap"
-        android:onClick="clicknext" />
+        <EditText
+            android:id="@+id/ed_website_insti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView5"
+            android:layout_alignLeft="@+id/ed_password_insti"
+            android:layout_alignStart="@+id/ed_password_insti"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            tools:ignore="HardcodedText" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/ed_institution"
-        android:inputType="text|textCapWords"
-        android:text="@string/institution_ed"
-        android:maxLines="1"
-        android:selectAllOnFocus="true"
-        android:alpha=".5"
-        android:layout_alignBaseline="@+id/view_institution"
-        android:layout_alignBottom="@+id/view_institution"
-        android:layout_alignLeft="@+id/ed_institution_email"
-        android:layout_alignStart="@+id/ed_institution_email" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/textView3"
+            android:layout_below="@+id/textView5"
+            android:layout_marginTop="59dp"
+            android:text="@string/index_number_insti" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/name_ed_De"
-        android:ems="10"
-        android:id="@+id/ed_instution_website"
-        android:inputType="textWebEmailAddress"
-        android:alpha=".5"
-        android:layout_alignBaseline="@+id/view_institution_link"
-        android:layout_alignBottom="@+id/view_institution_link"
-        android:layout_alignLeft="@+id/ed_index_number"
-        android:layout_alignStart="@+id/ed_index_number"
-        android:selectAllOnFocus="true"
-        android:maxLines="1" />
+        <EditText
+            android:id="@+id/ed_index_insti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView6"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            tools:ignore="HardcodedText" />
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Spinner_institution"
-        android:alpha=".5"
-        android:layout_alignTop="@+id/view_category"
-        android:layout_toRightOf="@+id/view_personal_emal"
-        android:layout_toEndOf="@+id/view_personal_emal" />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView6"
+            android:layout_marginTop="50dp"
+            android:text="Education Level"
+            tools:ignore="HardcodedText" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/personal_email_ed_ed"
-        android:ems="10"
-        android:id="@+id/ed_personal_email"
-        android:alpha=".5"
-        android:selectAllOnFocus="true"
-        android:inputType="textEmailAddress"
-        android:maxLines="1"
-        android:layout_alignBottom="@+id/view_personal_emal"
-        android:layout_alignLeft="@+id/ed_institution"
-        android:layout_alignStart="@+id/ed_institution" />
-</RelativeLayout>
+        <Spinner
+            android:id="@+id/Spinner_institution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ed_index_insti"
+            android:layout_alignStart="@+id/ed_index_insti"
+            android:layout_alignTop="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView2"
+            android:layout_alignRight="@+id/textView2"
+            android:layout_below="@+id/Spinner_institution"
+            android:layout_marginTop="35dp"
+            android:text="Category"
+            tools:ignore="HardcodedText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:id="@+id/spinner_cat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/Spinner_institution"
+            android:layout_alignStart="@+id/Spinner_institution"
+            android:layout_alignTop="@+id/textView9" />
+
+        <Button
+            android:id="@+id/btn_signin_institution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner_cat"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="34dp"
+            android:text="Next"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+</ScrollView>

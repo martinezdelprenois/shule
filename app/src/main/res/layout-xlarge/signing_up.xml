@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:text="@string/reviewer"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_reviewer"
+        android:layout_marginBottom="235dp"
+        tools:ignore="RelativeOverlap"
+        android:textSize="40sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/institution"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_institution"
+        tools:ignore="RelativeOverlap"
+        android:layout_marginBottom="66dp"
+        android:textSize="40sp"
+        android:layout_above="@+id/btn_reviewer"
+        android:layout_alignLeft="@+id/btn_reviewer"
+        android:layout_alignStart="@+id/btn_reviewer" />
+</RelativeLayout>
