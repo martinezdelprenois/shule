@@ -8,6 +8,9 @@ import com.example.marto.my_school_revierwer_4.SwipeViews.Introduction;
 
 public class Splash_Screen extends AppCompatActivity {
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,9 +21,21 @@ public class Splash_Screen extends AppCompatActivity {
             public void run(){
                 try{
                     sleep(3000);
-                    Intent i = new Intent(getApplicationContext(), Introduction.class);
-                    startActivity(i);
-                    finish();
+                    Boolean isfirstRun = getSharedPreferences("PREFERENCE",MODE_PRIVATE).getBoolean("isfirstrun", true);
+
+                    if(isfirstRun){
+                        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putBoolean("isfirstrun",false).commit();
+                        Intent i = new Intent(getApplicationContext(), Introduction.class);
+                        startActivity(i);
+                        finish();
+                    }
+
+                    else{
+                        Intent i = new Intent(getApplicationContext(), Home_one.class);
+                        startActivity(i);
+                        finish();
+                    }
+
                 }
 
                 catch (InterruptedException e){
