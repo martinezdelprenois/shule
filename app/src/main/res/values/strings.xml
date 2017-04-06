@@ -120,7 +120,7 @@
         <item> Pre-school</item>
         <item>Primary</item>
         <item> Secondary</item>
-    <item> University</item>
+        <item> University</item>
     </string-array>
 
     <string-array name="menu_for_individual"></string-array>

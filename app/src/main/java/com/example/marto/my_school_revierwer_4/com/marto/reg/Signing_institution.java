@@ -1,4 +1,4 @@
-package com.example.marto.my_school_revierwer_4;
+package com.example.marto.my_school_revierwer_4.com.marto.reg;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.marto.my_school_revierwer_4.com.marto.home.Institution_home;
+import com.example.marto.my_school_revierwer_4.R;
+import com.example.marto.my_school_revierwer_4.RestAPI;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -66,7 +70,7 @@ public class Signing_institution extends Activity implements View.OnClickListene
 
         insertInstitution();
         finish();
-        startActivity(new Intent(this,Insitution_home.class));
+        startActivity(new Intent(this,Institution_home.class));
     }
 
     private void insertInstitution(){

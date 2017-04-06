@@ -1,4 +1,4 @@
-package com.example.marto.my_school_revierwer_4;
+package com.example.marto.my_school_revierwer_4.com.marto.home;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,12 +12,17 @@ import android.widget.Spinner;
 import android.widget.ViewFlipper;
 
 import com.bumptech.glide.Glide;
+import com.example.marto.my_school_revierwer_4.R;
+import com.example.marto.my_school_revierwer_4.Splash_Screen;
 
 /**
  * Created by marto on 07-Feb-17.
  */
 
 public class Home_two extends AppCompatActivity {
+
+    Splash_Screen sr = new Splash_Screen();
+
 
     Spinner spin_category, spin_education_level;
     ArrayAdapter<CharSequence> array_category, array_education_level;

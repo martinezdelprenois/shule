@@ -1,9 +1,13 @@
-package com.example.marto.my_school_revierwer_4;
+package com.example.marto.my_school_revierwer_4.com.marto.signup.process;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.marto.my_school_revierwer_4.R;
+import com.example.marto.my_school_revierwer_4.com.marto.reg.Signing_institution;
+import com.example.marto.my_school_revierwer_4.com.marto.reg.Signing_reviewer;
 
 /**
  * Created by marto on 07-Feb-17.

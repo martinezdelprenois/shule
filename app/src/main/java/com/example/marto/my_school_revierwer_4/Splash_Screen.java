@@ -5,10 +5,16 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.marto.my_school_revierwer_4.SwipeViews.Introduction;
+import com.example.marto.my_school_revierwer_4.com.marto.signup.process.Home_one;
 
 public class Splash_Screen extends AppCompatActivity {
 
 
+    public Boolean isloggedin;
+
+   public Splash_Screen(){
+
+    }
 
 
     @Override
@@ -45,6 +51,10 @@ public class Splash_Screen extends AppCompatActivity {
         };
 
         splash.start();
+    }
+
+    public void logged(){
+        Boolean loggedin = false;
     }
 
 
