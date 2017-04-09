@@ -33,7 +33,7 @@ public class Signing_institution extends Activity implements View.OnClickListene
     EditText ed_institution_name, ed_personal_email, ed_password, ed_institution_email, ed_institution_websitelink, ed_institution_number;
     Spinner spin,spin_cat;
     ArrayAdapter<CharSequence> institution_category, institution_level;
-    private final String ROOT_URL = "http://10.3.3.208/";
+    private final String ROOT_URL = "http://192.168.43.102/";
    private Button btn;
     @Override
     protected void onCreate(Bundle state) {
