@@ -21,7 +21,7 @@ public interface RestAPI {
             @Field("Password") String pass,
             @Field("Website_Link") String website,
             @Field("Institution_Index_Number") String index,
-            @Field("Education_Level") String level,
+            @Field("Education_level") String level,
             @Field("Category") String category,
             Callback<Response> callback
 

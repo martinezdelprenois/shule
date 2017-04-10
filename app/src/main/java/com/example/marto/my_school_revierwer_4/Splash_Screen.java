@@ -5,8 +5,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.marto.my_school_revierwer_4.SwipeViews.Introduction;
+import com.example.marto.my_school_revierwer_4.com.marto.signup.process.Home_one;
 
 public class Splash_Screen extends AppCompatActivity {
+
+
+    public Boolean isloggedin;
+
+   public Splash_Screen(){
+
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +27,21 @@ public class Splash_Screen extends AppCompatActivity {
             public void run(){
                 try{
                     sleep(3000);
-                    Intent i = new Intent(getApplicationContext(), Introduction.class);
-                    startActivity(i);
-                    finish();
+                    Boolean isfirstRun = getSharedPreferences("PREFERENCE",MODE_PRIVATE).getBoolean("isfirstrun", true);
+
+                    if(isfirstRun){
+                        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putBoolean("isfirstrun",false).commit();
+                        Intent i = new Intent(getApplicationContext(), Introduction.class);
+                        startActivity(i);
+                        finish();
+                    }
+
+                    else{
+                        Intent i = new Intent(getApplicationContext(), Home_one.class);
+                        startActivity(i);
+                        finish();
+                    }
+
                 }
 
                 catch (InterruptedException e){
@@ -30,6 +51,10 @@ public class Splash_Screen extends AppCompatActivity {
         };
 
         splash.start();
+    }
+
+    public void logged(){
+        Boolean loggedin = false;
     }
 
 

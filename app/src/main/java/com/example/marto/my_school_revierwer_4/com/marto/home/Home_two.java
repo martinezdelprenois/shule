@@ -1,11 +1,10 @@
-package com.example.marto.my_school_revierwer_4;
+package com.example.marto.my_school_revierwer_4.com.marto.home;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -13,6 +12,8 @@ import android.widget.Spinner;
 import android.widget.ViewFlipper;
 
 import com.bumptech.glide.Glide;
+import com.example.marto.my_school_revierwer_4.R;
+import com.example.marto.my_school_revierwer_4.Splash_Screen;
 
 /**
  * Created by marto on 07-Feb-17.
@@ -20,9 +21,11 @@ import com.bumptech.glide.Glide;
 
 public class Home_two extends AppCompatActivity {
 
+    Splash_Screen sr = new Splash_Screen();
+
+
     Spinner spin_category, spin_education_level;
     ArrayAdapter<CharSequence> array_category, array_education_level;
-   private Toolbar tb_bottom;
     Intent share;
     String sharebody = "Dowload My School Reviewer App";
 
@@ -64,8 +67,8 @@ public class Home_two extends AppCompatActivity {
         flipper.setAutoStart(true);
         flipper.setFlipInterval(3000);
 
-        String urlimage = "http://10.3.37.78/MY_SCHOOL_REVIEWER/IMAGES/snake.png";
-        String urlimage2 = "http://10.3.37.78/MY_SCHOOL_REVIEWER/IMAGES/webstar.png";
+        String urlimage = "http://10.3.3.208/MY_SCHOOL_REVIEWER/IMAGES/snake.png";
+        String urlimage2 = "http://10.3.3.208/MY_SCHOOL_REVIEWER/IMAGES/webstar.png";
 
         Glide.with(Home_two.this).load(urlimage).into(v1);
         Glide.with(Home_two.this).load(urlimage2).into(v2);

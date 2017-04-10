@@ -1,4 +1,4 @@
-package com.example.marto.my_school_revierwer_4;
+package com.example.marto.my_school_revierwer_4.com.marto.reg;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.marto.my_school_revierwer_4.com.marto.home.Home_two;
+import com.example.marto.my_school_revierwer_4.R;
+import com.example.marto.my_school_revierwer_4.RestAPI;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -28,7 +32,7 @@ public class Signing_reviewer extends Activity implements View.OnClickListener{
     Button btn;
 
 
-    private final String ROOT_URL = "http://10.3.37.78/";
+    private final String ROOT_URL = "http://10.3.3.208/";
     @Override
     protected void onCreate(Bundle state){
         super.onCreate(state);

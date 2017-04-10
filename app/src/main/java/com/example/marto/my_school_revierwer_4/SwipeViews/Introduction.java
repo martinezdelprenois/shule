@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.marto.my_school_revierwer_4.Home_one;
+import com.example.marto.my_school_revierwer_4.com.marto.signup.process.Home_one;
 import com.example.marto.my_school_revierwer_4.R;
 
 /**

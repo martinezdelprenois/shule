@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.marto.my_school_revierwer_4">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -17,14 +18,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home_two" ></activity>
-        <activity android:name=".Signing_up_class" ></activity>
-        <activity android:name=".Signing_institution" ></activity>
-        <activity android:name=".Signing_reviewer" ></activity>
-        <activity android:name=".Insitution_home"></activity>
-        <activity android:name=".Home_one"></activity>
-        <activity android:name=".Intro_institution"></activity>
-        <activity android:name=".SwipeViews.Introduction"></activity>
+        <activity android:name=".com.marto.home.Home_two" />
+        <activity android:name=".com.marto.signup.process.Signing_up_class" />
+        <activity android:name=".com.marto.reg.Signing_institution" />
+        <activity android:name=".com.marto.reg.Signing_reviewer" />
+        <activity android:name=".com.marto.home.Institution_home" />
+        <activity android:name=".com.marto.signup.process.Home_one" />
+        <activity android:name=".Intro_institution" />
+        <activity android:name=".SwipeViews.Introduction" />
+        <activity android:name=".com.marto.login.Login_as" />
+        <activity android:name=".com.marto.login.Institution_login" />
+        <activity android:name=".com.marto.login.Reviewer_login"></activity>
     </application>
 
 </manifest>

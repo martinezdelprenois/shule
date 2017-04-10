@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.marto.my_school_revierwer_4.com.marto.home.Institution_home;
+
 import static com.example.marto.my_school_revierwer_4.R.layout.activity_intro_institution;
 
 public class Intro_institution extends Activity {
@@ -37,7 +39,7 @@ public class Intro_institution extends Activity {
         if(!int_manager.check()){ // if the app isnot open for the first time
 
             int_manager.setfirst(false);
-            Intent i = new Intent(Intro_institution.this, Insitution_home.class);
+            Intent i = new Intent(Intro_institution.this, Institution_home.class);
             startActivity(i);
             finish();
 
@@ -67,7 +69,7 @@ public class Intro_institution extends Activity {
         skip.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent i  = new Intent(Intro_institution.this, Insitution_home.class);
+                Intent i  = new Intent(Intro_institution.this, Institution_home.class);
                 startActivity(i);
                 finish();
             }
@@ -83,7 +85,7 @@ public class Intro_institution extends Activity {
                     pager.setCurrentItem(current);
 
                 else{
-                    Intent i  = new Intent(Intro_institution.this, Insitution_home.class);
+                    Intent i  = new Intent(Intro_institution.this, Institution_home.class);
                     startActivity(i);
                     finish();
                 }
