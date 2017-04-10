@@ -1,6 +1,7 @@
 package com.example.marto.my_school_revierwer_4.com.marto.login;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.marto.my_school_revierwer_4.R;
 import com.example.marto.my_school_revierwer_4.RestAPI;
+import com.example.marto.my_school_revierwer_4.SessionManager;
 import com.example.marto.my_school_revierwer_4.com.marto.home.Institution_home;
 
 import java.io.BufferedReader;
@@ -27,10 +29,14 @@ public class Institution_login extends AppCompatActivity implements View.OnClick
     EditText ed_index,ed_email,ed_pass;
     private final String ROOT_URL = "http://192.168.43.102/";
 
+   private SessionManager manager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_institution_login);
+
+        manager = new SessionManager();
 
         btn = (Button)findViewById(R.id.btn_institution_login);
         btn.setOnClickListener(this);
@@ -42,6 +48,14 @@ public class Institution_login extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
+        SharedPreferences.Editor editor = manager.PREF_INSTI.edit();
+        String u = ed_index.getText().toString();
+        String p = ed_email.getText().toString();
+        String q = ed_pass.getText().toString();
+        editor.putString(manager.INSTI_INDEX, u);
+        editor.putString(manager.INSTI_EMAIL, p);
+        editor.putString(manager.INSTI_PASS,q);
+        editor.commit();
         logincredentials();
         startActivity(new Intent(this,Institution_home.class));
         finish();

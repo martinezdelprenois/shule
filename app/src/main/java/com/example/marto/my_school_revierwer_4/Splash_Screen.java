@@ -7,22 +7,27 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.marto.my_school_revierwer_4.SwipeViews.Introduction;
 import com.example.marto.my_school_revierwer_4.com.marto.home.Home_two;
+import com.example.marto.my_school_revierwer_4.com.marto.home.Institution_home;
 import com.example.marto.my_school_revierwer_4.com.marto.signup.process.Home_one;
 
 public class Splash_Screen extends AppCompatActivity {
 
 
-   private SessionManager manager;
+   private SessionManager manager_rev;
+    private SessionManager manager_insti;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash__screen);
+        manager_rev = new SessionManager();
+        manager_insti = new SessionManager();
 
-        manager.pref = getSharedPreferences(SessionManager.preferences, Context.MODE_PRIVATE);
+        manager_rev.pref = getSharedPreferences(SessionManager.preferences, Context.MODE_PRIVATE);
+        manager_insti.PREF_INSTI = getSharedPreferences(SessionManager.pref_insti,Context.MODE_PRIVATE);
 
-        manager = new SessionManager();
+
 
         Thread splash = new Thread(){
             @Override
@@ -42,16 +47,22 @@ public class Splash_Screen extends AppCompatActivity {
 
                     }
 
-                    else if(manager.pref.contains(manager.rev_email)){
-                        if(manager.pref.contains(manager.rev_pass)){
+                    else if(manager_rev.pref.contains(manager_rev.rev_email)){
+                        if(manager_rev.pref.contains(manager_rev.rev_pass)){
                             Intent i = new Intent(getApplicationContext(), Home_two.class);
                             startActivity(i);
                             finish();
 
                         }
 
-                        {
 
+                    }
+
+                    else if(SessionManager.PREF_INSTI.contains(SessionManager.INSTI_INDEX)){
+                        if(SessionManager.PREF_INSTI.contains(SessionManager.INSTI_PASS)){
+                            Intent i = new Intent(getApplicationContext(), Institution_home.class);
+                            startActivity(i);
+                            finish();
                         }
                     }
 

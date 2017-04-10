@@ -15,7 +15,11 @@ public class SessionManager {
     public  static final String rev_pass = "pass_key";
 
     // BELOW ARE KEYS USED FOR INSTITUTION LOGIN  AND INSTITUTION SIGNUP
-    public static  SharedPreferences pref_insti;
+    public static  SharedPreferences PREF_INSTI;
+    public static final String pref_insti = "insti_pref";
+    public static final String INSTI_INDEX = "index_key";
+    public static final String INSTI_EMAIL = "insti_email";
+    public static final String INSTI_PASS = "pass_key";
 
 
 }
