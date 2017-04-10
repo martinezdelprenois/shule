@@ -2,6 +2,7 @@ package com.example.marto.my_school_revierwer_4.com.marto.reg;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -10,9 +11,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.marto.my_school_revierwer_4.com.marto.home.Institution_home;
 import com.example.marto.my_school_revierwer_4.R;
 import com.example.marto.my_school_revierwer_4.RestAPI;
+import com.example.marto.my_school_revierwer_4.SessionManager;
+import com.example.marto.my_school_revierwer_4.com.marto.home.Institution_home;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,12 +35,16 @@ public class Signing_institution extends Activity implements View.OnClickListene
     EditText ed_institution_name, ed_personal_email, ed_password, ed_institution_email, ed_institution_websitelink, ed_institution_number;
     Spinner spin,spin_cat;
     ArrayAdapter<CharSequence> institution_category, institution_level;
-    private final String ROOT_URL = "http://10.3.3.208/";
+    private final String ROOT_URL = "http://192.168.43.102/";
    private Button btn;
+
+    private SessionManager manager;
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
         setContentView(R.layout.signing_up_institution);
+
+        manager = new SessionManager();
 
         btn = (Button)findViewById(R.id.btn_signin_institution);
         btn.setOnClickListener(this);
@@ -67,6 +73,14 @@ public class Signing_institution extends Activity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
+        SharedPreferences.Editor editor = manager.PREF_INSTI.edit();
+        String u = ed_institution_number.getText().toString();
+        String p = ed_personal_email.getText().toString();
+        String q = ed_password.getText().toString();
+        editor.putString(manager.INSTI_INDEX, u);
+        editor.putString(manager.INSTI_EMAIL, p);
+        editor.putString(manager.INSTI_PASS,q);
+        editor.commit();
 
         insertInstitution();
         finish();

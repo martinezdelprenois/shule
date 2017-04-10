@@ -1,6 +1,8 @@
 package com.example.marto.my_school_revierwer_4.com.marto.home;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -8,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.example.marto.my_school_revierwer_4.R;
+import com.example.marto.my_school_revierwer_4.SessionManager;
+import com.example.marto.my_school_revierwer_4.com.marto.signup.process.Home_one;
 
 /**
  * Created by marto on 13-Feb-17.
@@ -48,6 +52,14 @@ public class Institution_home extends AppCompatActivity {
                         intent_share.putExtra(Intent.EXTRA_SUBJECT, " Download My School Reviewer app");
                         intent_share.putExtra(Intent.EXTRA_TEXT, sharebody);
                         startActivity(Intent.createChooser(intent_share, "Share"));
+
+                    case R.id.logou_school:
+                        SharedPreferences pref = getSharedPreferences(SessionManager.preferences, Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = pref.edit();
+                        editor.clear();
+                        editor.commit();
+                        Institution_home.this.finish();
+                        startActivity(new Intent(Institution_home.this, Home_one.class));
                 }
                 return false;
             }

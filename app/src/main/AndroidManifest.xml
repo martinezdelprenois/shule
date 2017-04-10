@@ -8,7 +8,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logo"
-        android:label="My school reveiwer"
+        android:label="My School Reveiwer"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Splash_Screen">

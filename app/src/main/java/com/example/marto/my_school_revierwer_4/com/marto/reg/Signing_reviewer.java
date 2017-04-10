@@ -2,15 +2,17 @@ package com.example.marto.my_school_revierwer_4.com.marto.reg;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.marto.my_school_revierwer_4.com.marto.home.Home_two;
 import com.example.marto.my_school_revierwer_4.R;
 import com.example.marto.my_school_revierwer_4.RestAPI;
+import com.example.marto.my_school_revierwer_4.SessionManager;
+import com.example.marto.my_school_revierwer_4.com.marto.home.Home_two;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,11 +34,16 @@ public class Signing_reviewer extends Activity implements View.OnClickListener{
     Button btn;
 
 
-    private final String ROOT_URL = "http://10.3.3.208/";
+    SessionManager manager;
+
+    private final String ROOT_URL = "http://192.168.43.102/";
     @Override
     protected void onCreate(Bundle state){
         super.onCreate(state);
         setContentView(R.layout.signing_up_reveiwer);
+
+        manager = new SessionManager();
+
 
         firstname = (EditText)findViewById(R.id.ed_first_name);
         lastname = (EditText)findViewById(R.id.ed_last_name);
@@ -48,8 +55,6 @@ public class Signing_reviewer extends Activity implements View.OnClickListener{
         btn.setOnClickListener(this);
 
     }
-
-
     private void insertUser(){
         //Here we will handle the http request to insert user to mysql db
         //Here we will handle the http request to insert user to mysql db
@@ -109,6 +114,12 @@ public class Signing_reviewer extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
+        SharedPreferences.Editor editor = manager.pref.edit();
+        String u = email.getText().toString();
+        String p = pass.getText().toString();
+        editor.putString(manager.rev_email, u);
+        editor.putString(manager.rev_pass, p);
+        editor.commit();
 insertUser();
         finish();
         startActivity(new Intent(this,Home_two.class));

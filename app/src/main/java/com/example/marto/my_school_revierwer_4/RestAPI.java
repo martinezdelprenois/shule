@@ -37,4 +37,22 @@ public interface RestAPI {
             @Field("Password") String pass,
             Callback<Response>callback
     );
+
+    @FormUrlEncoded
+    @POST("/MY_SCHOOL_REVIEWER/individuals_login.php")
+    public void individual_login(
+            @Field("Email") String Email,
+            @Field("Password")String pass,
+            Callback<Response>callback
+
+    );
+
+    @FormUrlEncoded
+    @POST("/MY_SCHOOL_REVIEWER/institutions_login.php")
+    public void institutions_login(
+            @Field("Personal_Email") String email,
+            @Field("Password") String pass,
+            @Field("Institution_Index_Number") String index,
+            Callback<Response>callback
+    );
 }
