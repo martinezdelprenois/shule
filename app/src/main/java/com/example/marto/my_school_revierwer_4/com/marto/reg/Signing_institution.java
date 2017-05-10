@@ -73,6 +73,7 @@ public class Signing_institution extends Activity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
+
         SharedPreferences.Editor editor = manager.PREF_INSTI.edit();
         String u = ed_institution_number.getText().toString();
         String p = ed_personal_email.getText().toString();

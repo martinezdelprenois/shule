@@ -18,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".com.marto.home.Home_two" />
+        <activity android:name=".com.marto.home.Reviewer_Home" />
         <activity android:name=".com.marto.signup.process.Signing_up_class" />
         <activity android:name=".com.marto.reg.Signing_institution" />
         <activity android:name=".com.marto.reg.Signing_reviewer" />
@@ -28,7 +28,12 @@
         <activity android:name=".SwipeViews.Introduction" />
         <activity android:name=".com.marto.login.Login_as" />
         <activity android:name=".com.marto.login.Institution_login" />
-        <activity android:name=".com.marto.login.Reviewer_login"></activity>
+        <activity android:name=".com.marto.login.Reviewer_login" />
+        <activity android:name=".com.marto.accounts.Institutions_Account" />
+        <activity android:name=".com.marto.accounts.Reviewer_Account" />
+        <activity android:name=".School_Account_Edit" />
+        <activity android:name=".School_Info_Edit" />
+        <activity android:name=".UploadImages"></activity>
     </application>
 
 </manifest>

@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 
 public class SessionManager {
 
+ public static final String HTTP = "http://192.168.43.102/";
     // Below are parts for the reviewer login and reviewer signin
    public static  SharedPreferences pref;
     public static final String preferences = "rev_pref";
