@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.example.marto.my_school_revierwer_4.R;
 import com.example.marto.my_school_revierwer_4.RestAPI;
 import com.example.marto.my_school_revierwer_4.SessionManager;
-import com.example.marto.my_school_revierwer_4.com.marto.home.Home_two;
+import com.example.marto.my_school_revierwer_4.com.marto.home.Reviewer_Home;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -36,7 +36,6 @@ public class Signing_reviewer extends Activity implements View.OnClickListener{
 
     SessionManager manager;
 
-    private final String ROOT_URL = "http://192.168.43.102/";
     @Override
     protected void onCreate(Bundle state){
         super.onCreate(state);
@@ -56,11 +55,12 @@ public class Signing_reviewer extends Activity implements View.OnClickListener{
 
     }
     private void insertUser(){
+
         //Here we will handle the http request to insert user to mysql db
         //Here we will handle the http request to insert user to mysql db
         //Creating a RestAdapter
         RestAdapter adapter = new RestAdapter.Builder()
-                .setEndpoint(ROOT_URL) //Setting the Root URL
+                .setEndpoint(SessionManager.HTTP) //Setting the Root URL
                 .build(); //Finally building the adapter
 
         //Creating object for our interface
@@ -114,15 +114,21 @@ public class Signing_reviewer extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        SharedPreferences.Editor editor = manager.pref.edit();
-        String u = email.getText().toString();
-        String p = pass.getText().toString();
-        editor.putString(manager.rev_email, u);
-        editor.putString(manager.rev_pass, p);
-        editor.commit();
-insertUser();
-        finish();
-        startActivity(new Intent(this,Home_two.class));
+        if(firstname.getText().toString().equals(" ") | lastname.getText().toString().equals(" ") | username.getText().toString().equals(" ")| email.getText().toString().
+                equals(" ") | pass.getText().toString().equals(" ")){
+            Toast.makeText(getApplicationContext(),"please fill all fields",Toast.LENGTH_LONG).show();
+        }
 
+        else {
+            SharedPreferences.Editor editor = manager.pref.edit();
+            String u = email.getText().toString();
+            String p = pass.getText().toString();
+            editor.putString(manager.rev_email, u);
+            editor.putString(manager.rev_pass, p);
+            editor.commit();
+            insertUser();
+            finish();
+            startActivity(new Intent(this, Reviewer_Home.class));
+        }
     }
 }

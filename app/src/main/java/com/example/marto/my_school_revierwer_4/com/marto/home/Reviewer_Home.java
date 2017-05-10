@@ -16,13 +16,14 @@ import android.widget.ViewFlipper;
 import com.bumptech.glide.Glide;
 import com.example.marto.my_school_revierwer_4.R;
 import com.example.marto.my_school_revierwer_4.SessionManager;
+import com.example.marto.my_school_revierwer_4.com.marto.accounts.Reviewer_Account;
 import com.example.marto.my_school_revierwer_4.com.marto.signup.process.Home_one;
 
 /**
  * Created by marto on 07-Feb-17.
  */
 
-public class Home_two extends AppCompatActivity {
+public class Reviewer_Home extends AppCompatActivity {
 
     Spinner spin_category, spin_education_level;
     ArrayAdapter<CharSequence> array_category, array_education_level;
@@ -71,8 +72,8 @@ public class Home_two extends AppCompatActivity {
         String urlimage = "http://192.168.43.102/MY_SCHOOL_REVIEWER/IMAGES/snake.png";
         String urlimage2 = "http://192.168.43.102/MY_SCHOOL_REVIEWER/IMAGES/webstar.png";
 
-        Glide.with(Home_two.this).load(urlimage).into(v1);
-        Glide.with(Home_two.this).load(urlimage2).into(v2);
+        Glide.with(Reviewer_Home.this).load(urlimage).into(v1);
+        Glide.with(Reviewer_Home.this).load(urlimage2).into(v2);
 
     }
     /*
@@ -91,14 +92,20 @@ public class Home_two extends AppCompatActivity {
                      share.putExtra(Intent.EXTRA_SUBJECT, " Download My School Reviewer app");
                      share.putExtra(Intent.EXTRA_TEXT, sharebody);
                      startActivity(Intent.createChooser(share, "Share"));
+                     break;
 
                  case R.id.logout_reviewer:
                      SharedPreferences pref = getSharedPreferences(SessionManager.preferences, Context.MODE_PRIVATE);
                      SharedPreferences.Editor editor = pref.edit();
                      editor.clear();
                      editor.commit();
-                     Home_two.this.finish();
-                     startActivity(new Intent(Home_two.this, Home_one.class));
+                     Reviewer_Home.this.finish();
+                     startActivity(new Intent(Reviewer_Home.this, Home_one.class));
+                     break;
+
+                 case R.id.reviewer_account:
+                     startActivity(new Intent(Reviewer_Home.this, Reviewer_Account.class));
+                     break;
              }
              return false;
          }

@@ -22,19 +22,18 @@
         android:layout_alignStart="@+id/view_last_name" />
 
     <EditText
+        android:id="@+id/password_reviewer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/password_reviewer"
-        android:text="@string/password_reviewer"
-        android:maxLines="1"
-        android:selectAllOnFocus="true"
-        android:alpha=".5"
         android:layout_above="@+id/btn_next_reviewer"
         android:layout_alignLeft="@+id/email_reveiwer"
         android:layout_alignStart="@+id/email_reveiwer"
         android:layout_marginBottom="36dp"
-        android:inputType="text"
+        android:alpha=".5"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:selectAllOnFocus="false"
         tools:ignore="TextFields" />
 
     <TextView
@@ -48,36 +47,34 @@
         android:layout_alignParentStart="true" />
 
     <EditText
+        android:id="@+id/email_reveiwer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/email_reveiwer"
-        android:text="@string/email_reviewer"
-        android:maxLines="1"
-        android:selectAllOnFocus="true"
-        android:alpha=".5"
         android:layout_above="@+id/password_reviewer"
         android:layout_alignLeft="@+id/account_reviewer"
         android:layout_alignStart="@+id/account_reviewer"
-        android:layout_marginBottom="27dp" />
+        android:layout_marginBottom="27dp"
+        android:alpha=".5"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:selectAllOnFocus="false" />
 
     <EditText
+        android:id="@+id/account_reviewer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        android:text="@string/user_name__"
-        android:ems="10"
-        android:id="@+id/account_reviewer"
-        android:selectAllOnFocus="true"
-        android:alpha=".5"
+        android:layout_above="@+id/email_reveiwer"
+        android:layout_marginBottom="33dp"
         android:layout_marginLeft="26dp"
         android:layout_marginStart="26dp"
-        android:layout_above="@+id/email_reveiwer"
-        android:layout_toRightOf="@+id/view_user_name"
         android:layout_toEndOf="@+id/view_user_name"
-        android:layout_marginBottom="33dp"
-        android:maxLines="1" />
+        android:layout_toRightOf="@+id/view_user_name"
+        android:alpha=".5"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLines="1"
+        android:selectAllOnFocus="false" />
 
     <TextView
         android:text="@string/user_name___"
@@ -89,19 +86,18 @@
         android:layout_alignStart="@+id/textview_email_reviewer" />
 
     <EditText
+        android:id="@+id/ed_first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/first_name"
-        android:ems="10"
-        android:id="@+id/ed_first_name"
         android:layout_above="@+id/ed_last_name"
         android:layout_alignLeft="@+id/ed_last_name"
         android:layout_alignStart="@+id/ed_last_name"
         android:layout_marginBottom="22dp"
         android:alpha=".5"
-        android:selectAllOnFocus="true"
-        android:maxLines="1" />
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:selectAllOnFocus="false" />
 
     <TextView
         android:text="@string/first_name_"
@@ -122,19 +118,18 @@
         android:layout_alignParentStart="true" />
 
     <EditText
+        android:id="@+id/ed_last_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/last_name"
-        android:ems="10"
-        android:id="@+id/ed_last_name"
-        android:layout_marginBottom="33dp"
         android:layout_above="@+id/account_reviewer"
         android:layout_alignLeft="@+id/account_reviewer"
         android:layout_alignStart="@+id/account_reviewer"
+        android:layout_marginBottom="33dp"
         android:alpha=".5"
-        android:selectAllOnFocus="true"
-        android:maxLines="1" />
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:selectAllOnFocus="false" />
 
     <LinearLayout
         android:orientation="vertical"

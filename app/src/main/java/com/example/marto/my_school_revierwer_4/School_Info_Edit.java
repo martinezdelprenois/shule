@@ -1,18 +1,11 @@
-package com.example.marto.my_school_revierwer_4.com.marto.login;
+package com.example.marto.my_school_revierwer_4;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.example.marto.my_school_revierwer_4.R;
-import com.example.marto.my_school_revierwer_4.RestAPI;
-import com.example.marto.my_school_revierwer_4.SessionManager;
-import com.example.marto.my_school_revierwer_4.com.marto.home.Institution_home;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,42 +16,30 @@ import retrofit.RestAdapter;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-public class Institution_login extends AppCompatActivity implements View.OnClickListener {
+public class School_Info_Edit extends AppCompatActivity {
 
     private Button btn;
-    EditText ed_email,ed_pass;
+    private EditText description,po_box,address,tel_1,tel_2;
 
-
-   private SessionManager manager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_institution_login);
+        setContentView(R.layout.activity_school__info__edit);
 
-        manager = new SessionManager();
-
-        btn = (Button)findViewById(R.id.btn_institution_login);
-        btn.setOnClickListener(this);
-
-        ed_email = (EditText)findViewById(R.id.ed_personal_email_institution_login);
-        ed_pass = (EditText)findViewById(R.id.ed_pass_institution_login);
+        description = (EditText)findViewById(R.id.ed_description);
+        po_box = (EditText)findViewById(R.id.po_box);
+        address = (EditText)findViewById(R.id.ed_address);
+        tel_1 = (EditText)findViewById(R.id.ed_tel_1);
+        tel_2 = (EditText)findViewById(R.id.ed_tel_2);
+        btn = (Button)findViewById(R.id.btn_save);
     }
 
-    @Override
-    public void onClick(View v) {
-        SharedPreferences.Editor editor = manager.PREF_INSTI.edit();
-        String p = ed_email.getText().toString();
-        String q = ed_pass.getText().toString();
-        editor.putString(manager.INSTI_EMAIL, p);
-        editor.putString(manager.INSTI_PASS,q);
-        editor.commit();
-        logincredentials();
-        startActivity(new Intent(this,Institution_home.class));
-        finish();
+    public void btn_upload(View v){
+        save_infor();
     }
 
-    private void logincredentials(){
+    private void save_infor(){
         //Here we will handle the http request to insert user to mysql db
         //Here we will handle the http request to insert user to mysql db
         //Creating a RestAdapter
@@ -69,15 +50,12 @@ public class Institution_login extends AppCompatActivity implements View.OnClick
         //Creating object for our interface
         RestAPI api = adapter.create(RestAPI.class);
 
-        //Defining the method insertuser of our interface
-        api.institutions_login(
-
-                //Passing the values by getting it from editTexts
-                ed_email.getText().toString(),
-                ed_pass.getText().toString(),
-
-
-
+        api.schools_information_upload(
+                description.getText().toString(),
+        po_box.getText().toString(),
+        address.getText().toString(),
+                tel_1.getText().toString(),
+                tel_2.getText().toString(),
 
                 //Creating an anonymous callback
                 new Callback<Response>() {
@@ -101,7 +79,7 @@ public class Institution_login extends AppCompatActivity implements View.OnClick
                         }
 
                         //Displaying the output as a toast
-                        Toast.makeText(Institution_login.this, output, Toast.LENGTH_LONG).show();
+                        Toast.makeText(School_Info_Edit.this, output, Toast.LENGTH_LONG).show();
 
                     }
 
@@ -109,11 +87,10 @@ public class Institution_login extends AppCompatActivity implements View.OnClick
                     @Override
                     public void failure(RetrofitError error) {
                         //If any error occured displaying the error as toast
-                        Toast.makeText(Institution_login.this, error.toString(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(School_Info_Edit.this, error.toString(),Toast.LENGTH_LONG).show();
                     }
                 }
         );
     }
-
 
 }

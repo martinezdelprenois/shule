@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.example.marto.my_school_revierwer_4.R;
 import com.example.marto.my_school_revierwer_4.RestAPI;
 import com.example.marto.my_school_revierwer_4.SessionManager;
-import com.example.marto.my_school_revierwer_4.com.marto.home.Home_two;
+import com.example.marto.my_school_revierwer_4.com.marto.home.Reviewer_Home;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -27,7 +27,7 @@ public class Reviewer_login extends AppCompatActivity implements View.OnClickLis
 
     private Button btn;
   static  EditText ed_email, ed_pass;
-    private final String ROOT_URL = "http://192.168.43.102/";
+
 
 
 
@@ -51,24 +51,36 @@ public class Reviewer_login extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        SharedPreferences.Editor editor = manager.pref.edit();
-        String u = ed_email.getText().toString();
-        String p = ed_pass.getText().toString();
-        editor.putString(manager.rev_email, u);
-        editor.putString(manager.rev_pass, p);
-        editor.commit();
 
-        logincredentials();
-        startActivity(new Intent(this, Home_two.class));
-        finish();
+
+        if (ed_email.getText().toString() == " " || ed_pass.getText().toString() == " ") {
+            Toast.makeText(Reviewer_login.this, "please fill all fields", Toast.LENGTH_LONG).show();
+
+        }
+
+        else {
+
+            SharedPreferences.Editor editor = manager.pref.edit();
+            String u = ed_email.getText().toString();
+            String p = ed_pass.getText().toString();
+            editor.putString(manager.rev_email, u);
+            editor.putString(manager.rev_pass, p);
+            editor.commit();
+
+            logincredentials();
+            startActivity(new Intent(this, Reviewer_Home.class));
+            finish();
+        }
+
     }
+
 
     private void logincredentials(){
         //Here we will handle the http request to insert user to mysql db
         //Here we will handle the http request to insert user to mysql db
         //Creating a RestAdapter
         RestAdapter adapter = new RestAdapter.Builder()
-                .setEndpoint(ROOT_URL) //Setting the Root URL
+                .setEndpoint(SessionManager.HTTP) //Setting the Root URL
                 .build(); //Finally building the adapter
 
         //Creating object for our interface

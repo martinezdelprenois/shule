@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/reviewer_accont"
+        android:id="@+id/reviewer_account"
         android:icon="@drawable/ic_account"
         android:title="Account"
         android:visible="true"

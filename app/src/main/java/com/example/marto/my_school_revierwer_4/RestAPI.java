@@ -13,7 +13,7 @@ import retrofit.http.POST;
 public interface RestAPI {
 
     @FormUrlEncoded
-    @POST("/MY_SCHOOL_REVIEWER/Institutions_signup.php")
+    @POST("/MY_SCHOOL_REVIEWER/school_reg.php")
     public void register_school(
 
             @Field("Institution_Name") String institution,
@@ -28,7 +28,7 @@ public interface RestAPI {
     );
 
     @FormUrlEncoded
-    @POST("/MY_SCHOOL_REVIEWER/Individuals_signup.php")
+    @POST("/MY_SCHOOL_REVIEWER/reviewer_reg.php")
     public void register_user(
             @Field("First_Name") String first_name,
             @Field("Last_Name") String last_name,
@@ -39,7 +39,7 @@ public interface RestAPI {
     );
 
     @FormUrlEncoded
-    @POST("/MY_SCHOOL_REVIEWER/individuals_login.php")
+    @POST("/MY_SCHOOL_REVIEWER/reviewers_login.php")
     public void individual_login(
             @Field("Email") String Email,
             @Field("Password")String pass,
@@ -52,7 +52,27 @@ public interface RestAPI {
     public void institutions_login(
             @Field("Personal_Email") String email,
             @Field("Password") String pass,
-            @Field("Institution_Index_Number") String index,
             Callback<Response>callback
     );
+
+    @FormUrlEncoded
+    @POST("/MY_SCHOOL_REVIEWER/school_information.php")
+    public void schools_information_upload(
+            @Field("Description") String description,
+            @Field("PO_BOX") String po_box,
+            @Field("Address") String address,
+            @Field("Telephone_1") String tel_1,
+            @Field("Telephone_2") String tel_2,
+            Callback<Response>callback
+    );
+
+    @FormUrlEncoded
+    @POST("/MY_SCHOOL_REVIEWER/silent_reviewer_login.php")
+   public  void silent_login_rev(
+      @Field("Email") String email,
+      @Field("Password") String password,
+      Callback<Response>callback
+    );
+
+
 }
